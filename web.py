@@ -20,15 +20,6 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 st.title("Jha Search")
 def get_source(url):
-    """Return the source code for the provided URL. 
-
-    Args: 
-        url (string): URL of the page to scrape.
-
-    Returns:
-        response (object): HTTP response object from requests_html. 
-    """
-
     try:
         session = HTMLSession()
         response = session.get(url)
@@ -36,10 +27,9 @@ def get_source(url):
 
     except requests.exceptions.RequestException as e:
         print(e)
-# imput query
-# add PlaceHolder search the world
+
 query = st.text_input("Search the world", "")
-# add placeholder 
+ 
 
 
 def scrape_google(query):
@@ -62,7 +52,7 @@ def scrape_google(query):
 
     return links
 
-# print(scrape_google("data science blogs"))
+
 
 def get_results(query):
     
@@ -113,10 +103,7 @@ if st.button("Search world"):
         link = df['link']
         text = df['text']
 
-        # write title then link and then text
-        # add link inside the title
         for i in range(len(title)):
-            # st.link(title[i], link[i])
             st.header(title[i])
             st.markdown(link[i])
             st.text(text[i])
@@ -143,4 +130,7 @@ if query:
             st.write("\n")
     except:
         st.error("Sorry, No results found :( Please try another query")
+
+
+
 
