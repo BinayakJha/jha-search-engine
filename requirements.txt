@@ -1,0 +1,5 @@
+pandas
+numpy
+urllib
+streamlit
+requests_html
