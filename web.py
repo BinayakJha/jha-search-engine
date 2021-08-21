@@ -90,7 +90,7 @@ def google_search(query):
     response = get_results(query)
     return parse_results(response)
 results = google_search(query)
-print(results)
+
 
     
 import pandas
