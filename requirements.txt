@@ -3,3 +3,4 @@ numpy
 urllib3
 streamlit
 requests_html
+people-also-ask

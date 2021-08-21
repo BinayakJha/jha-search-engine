@@ -6,7 +6,7 @@ import pandas as pd
 from requests_html import HTML
 from requests_html import HTMLSession
 import streamlit as st
-from streamlit.elements.image import image_to_url
+import people_also_ask
 st.set_page_config(page_title="Jha Browser")
 # css 
 hide_streamlit_style = """
@@ -70,17 +70,20 @@ def parse_results(response):
     css_identifier_title = ".yuRUbf h3"
     css_identifier_link = ".yuRUbf a"
     css_identifier_text = ".IsZvec"
+    # related search tab
+    css_identifier_featured=".di3YZe"
     results = response.html.find(css_identifier_result)
+    
 
     output = []
     
     for result in results:
-
         item = {
             'title': result.find(css_identifier_title, first=True).text,
             'link': result.find(css_identifier_link, first=True).attrs['href'],
-            'text': result.find(css_identifier_text, first=True).text,
+            'text': result.find(css_identifier_text, first=True).text, 
         }
+
         
         output.append(item)
         
@@ -99,6 +102,8 @@ import pandas
 
 if st.button("Search world"):
     try:
+        featured_answer = people_also_ask.get_simple_answer(query)
+        st.markdown(featured_answer)
         df = pandas.DataFrame(results)
         title = df['title']
         link = df['link']
@@ -109,14 +114,21 @@ if st.button("Search world"):
             st.markdown(link[i])
             st.text(text[i])
             st.markdown("---")
+
             st.write("\n")
     except:
         st.error("Sorry, No results found :( Please try another query")
 
 if query:
     try:
+        st.header('Featured answer :')
+        col1,col2 = st.columns([0.5,6]) 
+
+        with col2:            
+            featured_answer = people_also_ask.get_simple_answer(query)
+            st.write(featured_answer)
+        st.markdown('---')
         df = pandas.DataFrame(results)
-        
         title = df['title']
         link = df['link']
         text = df['text']
@@ -131,5 +143,16 @@ if query:
             st.write("\n")
     except:
         st.error("Sorry, No results found :( Please try another query")
+    
+    # people also ask tab
+    # st.header("People also ask ")
+    
+    # results = people_also_ask.get_simple_answer("2+2")
+    # st.write(results)
+    # # df = pandas.DataFrame(results)
+    # df.to_csv("people_also_ask.csv")
+    # st.write(results)
+
+
 
 
