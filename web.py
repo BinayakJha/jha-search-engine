@@ -128,8 +128,6 @@ if query:
             featured_answer = people_also_ask.get_simple_answer(query)
             st.write(featured_answer)
         st.markdown('---')
-    except:
-        pass
         # write title then link and then text
         # add link inside the title
         for i in range(len(title)):
