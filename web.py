@@ -21,7 +21,7 @@ hide_streamlit_style = """
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
-st.markdown("<h1 style='text-align: center;margin-top:-60px;'>Jha Browser</h1><p style='text-align:center;'>Fast, Secure, Full privacy control to the user, Non tracking Browser</p><p  style='text-align:center;margin-bottom:-2px;'>Search Here!!</p>", unsafe_allow_html=True)
+placeholder = st.markdown("<h1 style='text-align: center;margin-top:-60px;'>Jha Browser</h1><p style='text-align:center;'>Fast, Secure, Full privacy control to the user, Non tracking Browser</p><p  style='text-align:center;margin-bottom:-2px;'>Search Here!!</p>", unsafe_allow_html=True)
 def get_source(url):
     try:
         session = HTMLSession()
@@ -160,7 +160,7 @@ import pandas
 #         st.error("Sorry, No results found :( Please try another query")
 
 if query:
-   
+    placeholder.empty()
     col1, col2, col3,col4,col5,col6,col7= st.columns([0.5,1,1,1,1,1,1])
     with col1:
         all = st.markdown("All")
@@ -202,4 +202,3 @@ if query:
             st.write("\n")
     except:
         st.error("Sorry, No results found :( Please try another query")
-
