@@ -19,7 +19,7 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
-st.title("Jha Search")
+st.title("Jha Browser - Made By Binayak jha")
 def get_source(url):
     try:
         session = HTMLSession()
