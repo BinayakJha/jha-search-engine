@@ -21,9 +21,7 @@ hide_streamlit_style = """
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
-
-st.title("Jha Browser - Made By Binayak jha")
-st.write("Fast, Secure, Full privacy control to the user, Non tracking Browser")
+st.markdown("<h1 style='text-align: center;margin-top:-60px;'>Jha Browser</h1><p style='text-align:center;'>Fast, Secure, Full privacy control to the user, Non tracking Browser</p><p  style='text-align:center;margin-bottom:-2px;'>Search Here!!</p>", unsafe_allow_html=True)
 def get_source(url):
     try:
         session = HTMLSession()
@@ -34,12 +32,13 @@ def get_source(url):
         print(e)
 col1,col2 = st.columns([6,2])
 with col1:
-    query = st.text_input("Search the world")
+    query = st.text_input("")
 with col2:
     button = """
 <style>
-    .css-1ubkpyc{margin:21px -1px;padding: 12px 28px 12px 28px;}
+    .css-1ubkpyc{margin:21px -1px;padding: 18px 35px 14px 35px;}
     .stButton{margin:-8px;}
+    .st-bc{padding: 7px}
 </style>
 """
     st.markdown(button, unsafe_allow_html=True)
@@ -161,7 +160,8 @@ import pandas
 #         st.error("Sorry, No results found :( Please try another query")
 
 if query:
-    col1, col2, col3,col4,col5,col6,col7= st.columns(7)
+   
+    col1, col2, col3,col4,col5,col6,col7= st.columns([0.5,1,1,1,1,1,1])
     with col1:
         all = st.markdown("All")
     with col2:
