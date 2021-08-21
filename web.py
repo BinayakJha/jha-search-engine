@@ -6,6 +6,7 @@ import pandas as pd
 from requests_html import HTML
 from requests_html import HTMLSession
 import streamlit as st
+from streamlit.elements.image import image_to_url
 st.set_page_config(page_title="Jha Browser")
 # css 
 hide_streamlit_style = """
@@ -19,6 +20,7 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
 st.title("Jha Browser - Made By Binayak jha")
+st.write("Fast, Secure, Full privacy control to the user, Non tracking Browser")
 def get_source(url):
     try:
         session = HTMLSession()
@@ -68,7 +70,6 @@ def parse_results(response):
     css_identifier_title = ".yuRUbf h3"
     css_identifier_link = ".yuRUbf a"
     css_identifier_text = ".IsZvec"
-    
     results = response.html.find(css_identifier_result)
 
     output = []
@@ -78,7 +79,7 @@ def parse_results(response):
         item = {
             'title': result.find(css_identifier_title, first=True).text,
             'link': result.find(css_identifier_link, first=True).attrs['href'],
-            'text': result.find(css_identifier_text, first=True).text
+            'text': result.find(css_identifier_text, first=True).text,
         }
         
         output.append(item)
@@ -115,6 +116,7 @@ if st.button("Search world"):
 if query:
     try:
         df = pandas.DataFrame(results)
+        
         title = df['title']
         link = df['link']
         text = df['text']
@@ -123,14 +125,11 @@ if query:
         # add link inside the title
         for i in range(len(title)):
             # st.link(title[i], link[i])
-            st.header(title[i])
-            st.markdown(link[i])
+            st.header(f"[{title[i]}]({link[i]})")
             st.text(text[i])
             st.markdown("---")
             st.write("\n")
     except:
         st.error("Sorry, No results found :( Please try another query")
-
-
 
 
