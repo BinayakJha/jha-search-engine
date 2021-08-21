@@ -7,6 +7,7 @@ from requests_html import HTML
 from requests_html import HTMLSession
 import streamlit as st
 import people_also_ask
+
 st.set_page_config(page_title="Jha Browser")
 # css 
 hide_streamlit_style = """
@@ -108,8 +109,6 @@ if st.button("Search world"):
             with col2:            
                 featured_answer = people_also_ask.get_simple_answer(query)
                 st.write(featured_answer)
-                df = pd.DataFrame(results)
-                df.to_csv("cc.csv")
             st.markdown('---')
             st.write("\n")
         except:
@@ -137,8 +136,6 @@ if query:
             with col2:            
                 featured_answer = people_also_ask.get_simple_answer(query)
                 st.write(featured_answer)
-                df = pd.DataFrame(results)
-                df.to_csv("cc.csv")
             st.markdown('---')
             st.write("\n")
         except:
