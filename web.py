@@ -12,10 +12,12 @@ st.set_page_config(page_title="Jha Browser")
 # css 
 hide_streamlit_style = """
             <style>
+            
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             .stConnectionStatus{visibility: hidden;}
             .viewerBadge_container__1QSob {visibility: hidden !important;}
+             body { overflow-x:hidden;}
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
@@ -30,8 +32,19 @@ def get_source(url):
 
     except requests.exceptions.RequestException as e:
         print(e)
+col1,col2 = st.columns([6,2])
+with col1:
+    query = st.text_input("Search the world")
+with col2:
+    button = """
+<style>
+    .css-1ubkpyc{margin:22px -1px;padding: 12px 28px 12px 28px;}
+    .stButton{margin:-8px;}
+</style>
+"""
+    st.markdown(button, unsafe_allow_html=True)
+    st.button("Search")
 
-query = st.text_input("Search the world", "")
  
 
 
@@ -96,39 +109,73 @@ def google_search(query):
 results = google_search(query)
 
 
-    
 import pandas
 # export results to csv file
 
+# a = st.button("")
 
-if st.button("Search world"):
-    try:
-        try:
-            st.header('Featured answer :')
-            col1,col2 = st.columns([0.5,6]) 
-            with col2:            
-                featured_answer = people_also_ask.get_simple_answer(query)
-                st.write(featured_answer)
-            st.markdown('---')
-            st.write("\n")
-        except:
-            pass
-        df = pandas.DataFrame(results)
-        title = df['title']
-        link = df['link']
-        text = df['text']
+# if a:
+#     # hide the a button
+#     col1, col2, col3,col4,col5,col6,col7= st.columns(7)
+#     with col1:
+#         all = st.markdown("All")
+#     with col2:
+#         images = st.markdown("Images")
+#     with col3:
+#         videos = st.markdown("News")
+#     with col4:
+#         maps = st.markdown("Videos")
+#     with col5:
+#         st.write("")
+#     with col6:
+#         st.write("")
+#     with col7:
+#         st.markdown("Info")
 
-        for i in range(len(title)):
-            st.header(title[i])
-            st.markdown(link[i])
-            st.text(text[i])
-            st.markdown("---")
 
-            st.write("\n")
-    except:
-        st.error("Sorry, No results found :( Please try another query")
+
+#     try:
+#         try:
+#             st.header('Featured answer :')
+#             col1,col2 = st.columns([0.5,6]) 
+#             with col2:            
+#                 featured_answer = people_also_ask.get_simple_answer(query)
+#                 st.write(featured_answer)
+#             st.markdown('---')
+#             st.write("\n")
+#         except:
+#             pass
+#         df = pandas.DataFrame(results)
+#         title = df['title']
+#         link = df['link']
+#         text = df['text']
+
+#         for i in range(len(title)):
+#             st.header(title[i])
+#             st.markdown(link[i])
+#             st.text(text[i])
+#             st.markdown("---")
+
+#             st.write("\n")
+#     except:
+#         st.error("Sorry, No results found :( Please try another query")
 
 if query:
+    col1, col2, col3,col4,col5,col6,col7= st.columns(7)
+    with col1:
+        all = st.markdown("All")
+    with col2:
+        images = st.markdown("Images")
+    with col3:
+        videos = st.markdown("News")
+    with col4:
+        maps = st.markdown("Videos")
+    with col5:
+        st.write("")
+    with col6:
+        st.write("")
+    with col7:
+        st.markdown("Info")
     try:
         try:
             st.header('Featured answer :')
@@ -139,6 +186,7 @@ if query:
             st.markdown('---')
             st.write("\n")
         except:
+            st.write('No Featured answer found!')
             pass
         df = pandas.DataFrame(results)
         title = df['title']
@@ -154,6 +202,4 @@ if query:
             st.write("\n")
     except:
         st.error("Sorry, No results found :( Please try another query")
-
-
 
