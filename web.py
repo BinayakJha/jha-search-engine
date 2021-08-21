@@ -132,7 +132,8 @@ if query:
         title = df['title']
         link = df['link']
         text = df['text']
-
+    except:
+        pass
         # write title then link and then text
         # add link inside the title
         for i in range(len(title)):
