@@ -6,6 +6,7 @@ import pandas as pd
 from requests_html import HTML
 from requests_html import HTMLSession
 import streamlit as st
+st.set_page_config(page_title="Jha Browser")
 # css 
 hide_streamlit_style = """
             <style>
