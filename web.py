@@ -38,7 +38,7 @@ with col1:
 with col2:
     button = """
 <style>
-    .css-1ubkpyc{margin:22px -1px;padding: 12px 28px 12px 28px;}
+    .css-1ubkpyc{margin:21px -1px;padding: 12px 28px 12px 28px;}
     .stButton{margin:-8px;}
 </style>
 """
