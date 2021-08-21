@@ -13,9 +13,7 @@ hide_streamlit_style = """
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             .stConnectionStatus{visibility: hidden;}
-
-            .stButton {width: 100%;}
-            .viewerBadge_link__1S137{visibility: hidden;}
+            .viewerBadge_container__1QSob {visibility: hidden !important;}
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
