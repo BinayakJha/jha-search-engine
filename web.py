@@ -128,10 +128,6 @@ if query:
             featured_answer = people_also_ask.get_simple_answer(query)
             st.write(featured_answer)
         st.markdown('---')
-        df = pandas.DataFrame(results)
-        title = df['title']
-        link = df['link']
-        text = df['text']
     except:
         pass
         # write title then link and then text
