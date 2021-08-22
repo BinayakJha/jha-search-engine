@@ -36,7 +36,7 @@ with col1:
 with col2:
     button = """
 <style>
-    .css-1ubkpyc{margin:21px -1px;padding: 18px 35px 14px 35px;}
+    .css-1ubkpyc{margin:21px -1px;padding: 18px 35px 14px 35px;-webkit-margin:21px -1px;-webkit-padding:18px 35px 14px 35px;-moz-margin:21px -1px;-moz-padding:18px 35px 14px 35px;-ms-margin:21px -1px;-ms-padding:18px 35px 14px 35px;-o-margin:21px -1px;-o-padding:18px 35px 14px 35px;}
     .stButton{margin:-8px;}
     .st-bc{padding: 7px}
 </style>
@@ -161,7 +161,7 @@ import pandas
 
 if query:
     placeholder.empty()
-    col1, col2, col3,col4,col5,col6,col7= st.columns([0.5,1,1,1,1,1,1])
+    col1, col2, col3,col4,col5,col6,col7= st.columns((0.5,1,1,1,1,1,1))
     with col1:
         all = st.markdown("All")
     with col2:
