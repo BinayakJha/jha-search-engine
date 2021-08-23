@@ -57,8 +57,8 @@ def scrape_google(query):
     response = get_source("https://search.brave.com/search?q=" + query)
 
     links = list(response.html.absolute_links)
-    google_domains = ('https://www.google.', 
-                      'https://google.', 
+    google_domains = ('https://www.brave.', 
+                      'https://brave.', 
                       'https://webcache.googleusercontent.', 
                       'http://webcache.googleusercontent.', 
                       'https://policies.google.',
@@ -83,7 +83,7 @@ def get_results(query):
     
 
 def parse_results(response):
-    css_identifier_result = ".snippet"
+    css_identifier_result = "#results"
     css_identifier_title = ".snippet-title"
     css_identifier_link = ".result-header"
     css_identifier_text = ".snippet-description"
@@ -107,7 +107,6 @@ def parse_results(response):
                 'title': result.find(css_identifier_title, first=True).text,
                 'link': result.find(css_identifier_link, first=True).attrs['href'],
                 'text': result.find(css_identifier_text, first=True).text, 
-
                 'favicon': result.find(css_identifier_favicon, first=True).attrs['src']
                 
             }
