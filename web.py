@@ -17,6 +17,7 @@ body {
 </style>""", unsafe_allow_html=True)
 hide_streamlit_style = """
             <style>
+            
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             .stConnectionStatus{visibility: hidden;}
@@ -34,7 +35,7 @@ def get_source(url):
 
     except requests.exceptions.RequestException as e:
         print(e)
-col1,col2 = st.columns([6,3])
+col1,col2 = st.columns([6,2])
 with col1:
     query = st.text_input("")
 with col2:
@@ -54,11 +55,11 @@ with col2:
 def scrape_google(query):
 
     query = urllib.parse.quote_plus(query)
-    response = get_source("https://search.brave.com/search?q=" + query)
+    response = get_source("https://www.google.co.uk/search?q=" + query)
 
     links = list(response.html.absolute_links)
-    google_domains = ('https://www.brave.', 
-                      'https://brave.', 
+    google_domains = ('https://www.google.', 
+                      'https://google.', 
                       'https://webcache.googleusercontent.', 
                       'http://webcache.googleusercontent.', 
                       'https://policies.google.',
@@ -76,51 +77,31 @@ def scrape_google(query):
 def get_results(query):
     
     query = urllib.parse.quote_plus(query)
-    response = get_source("https://search.brave.com/search?q=" + query)
+    response = get_source("https://www.google.co.uk/search?q=" + query)
     # replace whitespace with +
     query = query.replace(" ", "+")
     return response
     
 
 def parse_results(response):
-    css_identifier_result = "#results"
-    css_identifier_title = ".snippet-title"
-    css_identifier_link = ".result-header"
-    css_identifier_text = ".snippet-description"
-    try:
-        css_identifier_favicon = ".favicon"
-    except:
-        css_identifier_favicon = ""
-    try:
-        css_identifier_thumb= ".thumb"
-    except:
-        css_identifier_thumb = ""
+    css_identifier_result = ".tF2Cxc"
+    css_identifier_title = ".yuRUbf h3"
+    css_identifier_link = ".yuRUbf a"
+    css_identifier_text = ".IsZvec"
     # related search tab
+    css_identifier_featured=".di3YZe"
     results = response.html.find(css_identifier_result)
     
 
     output = []
     
     for result in results:
-        try:
-            item = {
-                'title': result.find(css_identifier_title, first=True).text,
-                'link': result.find(css_identifier_link, first=True).attrs['href'],
-                'text': result.find(css_identifier_text, first=True).text, 
-                'favicon': result.find(css_identifier_favicon, first=True).attrs['src']
-                
-            }
-        except:
-            item = {
-                'title': result.find(css_identifier_title, first=True).text,
-                'link': result.find(css_identifier_link, first=True).attrs['href'],
-                'text': result.find(css_identifier_text, first=True).text, 
-                'favicon': ""
-            }
-        try:
-            item['thumb'] = result.find(css_identifier_thumb, first=True).attrs['src']
-        except:
-            item['thumb'] = ""
+        item = {
+            'title': result.find(css_identifier_title, first=True).text,
+            'link': result.find(css_identifier_link, first=True).attrs['href'],
+            'text': result.find(css_identifier_text, first=True).text, 
+        }
+
         
         output.append(item)
         
@@ -130,8 +111,6 @@ def google_search(query):
     response = get_results(query)
     return parse_results(response)
 results = google_search(query)
-
-
 # favicons
 
 import pandas
@@ -220,6 +199,7 @@ if query:
         link = df['link']
         text = df['text']
         try:
+           
             favicon = df['favicon']
         except:
             favicon = ""
@@ -231,6 +211,7 @@ if query:
         # write title then link and then text
         # add link inside the title
         for i in range(len(title)):
+           
             col1,col2 = st.columns([0.5,6])
             # add style 
             style =  """
@@ -249,25 +230,19 @@ if query:
             # st.link(title[i], link[i])
             with col1:
                 try:
-                    st.image(favicon[i])
+                    favicon_url = "https://www.google.com/s2/favicons?domain="+link[i]
+                    st.image(favicon_url,width=29)
                 except:
                     pass
 
             with col2:
                 
                 st.header(f"[{title[i]}]({link[i]})")
-            col1,col2,col3 = st.columns([0.5,6,1])
+            col1,col2 = st.columns([0.5,6])
             with col2:
                 st.markdown(f'{text[i]}')
             st.markdown("---")
             st.write("\n")
-            try:
-                with col3:
-                   st.image(thumb[i])
-            except:
-                with col3:
-                    
-                    pass
     except:
         st.error("Sorry, No results found :( Please try another query")
     # imdb column
