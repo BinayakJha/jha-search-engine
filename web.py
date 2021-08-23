@@ -30,7 +30,7 @@ def get_source(url):
 
     except requests.exceptions.RequestException as e:
         print(e)
-col1,col2 = st.columns([6,2])
+col1,col2 = st.columns([6,3])
 with col1:
     query = st.text_input("")
 with col2:
@@ -50,7 +50,7 @@ with col2:
 def scrape_google(query):
 
     query = urllib.parse.quote_plus(query)
-    response = get_source("https://www.google.co.uk/search?q=" + query)
+    response = get_source("https://search.brave.com/search?q=" + query)
 
     links = list(response.html.absolute_links)
     google_domains = ('https://www.google.', 
@@ -72,31 +72,43 @@ def scrape_google(query):
 def get_results(query):
     
     query = urllib.parse.quote_plus(query)
-    response = get_source("https://www.google.co.uk/search?q=" + query)
+    response = get_source("https://search.brave.com/search?q=" + query)
     # replace whitespace with +
     query = query.replace(" ", "+")
     return response
     
 
 def parse_results(response):
-    css_identifier_result = ".tF2Cxc"
-    css_identifier_title = ".yuRUbf h3"
-    css_identifier_link = ".yuRUbf a"
-    css_identifier_text = ".IsZvec"
+    css_identifier_result = ".snippet"
+    css_identifier_title = ".snippet-title"
+    css_identifier_link = ".result-header"
+    css_identifier_text = ".snippet-description"
+    try:
+        css_identifier_favicon = ".favicon"
+    except:
+        css_identifier_favicon = ""
     # related search tab
-    css_identifier_featured=".di3YZe"
     results = response.html.find(css_identifier_result)
     
 
     output = []
     
     for result in results:
-        item = {
-            'title': result.find(css_identifier_title, first=True).text,
-            'link': result.find(css_identifier_link, first=True).attrs['href'],
-            'text': result.find(css_identifier_text, first=True).text, 
-        }
+        try:
+            item = {
+                'title': result.find(css_identifier_title, first=True).text,
+                'link': result.find(css_identifier_link, first=True).attrs['href'],
+                'text': result.find(css_identifier_text, first=True).text, 
 
+                'favicon': result.find(css_identifier_favicon, first=True).attrs['src']
+            }
+        except:
+            item = {
+                'title': result.find(css_identifier_title, first=True).text,
+                'link': result.find(css_identifier_link, first=True).attrs['href'],
+                'text': result.find(css_identifier_text, first=True).text, 
+                'favicon': ""
+            }
         
         output.append(item)
         
@@ -107,6 +119,8 @@ def google_search(query):
     return parse_results(response)
 results = google_search(query)
 
+
+# favicons
 
 import pandas
 # export results to csv file
@@ -189,15 +203,42 @@ if query:
             st.write('No Featured answer found!')
             pass
         df = pandas.DataFrame(results)
+
         title = df['title']
         link = df['link']
         text = df['text']
+        try:
+            favicon = df['favicon']
+        except:
+            favicon = ""
         # write title then link and then text
         # add link inside the title
         for i in range(len(title)):
+            col1,col2 = st.columns([0.5,6])
+            # add style 
+            style =  """
+            <style>
+            .css-1v0mbdj{
+                margin: 8px 2px;
+            }
+            .css-1v0mbdj img{
+                border-radius:50%;
+            }
+            .css-vtsuw1{
+                bottom: 10px;    
+            }
+            """
+            st.markdown(style, unsafe_allow_html=True)
             # st.link(title[i], link[i])
-            st.header(f"[{title[i]}]({link[i]})")
-            st.text(text[i])
+            with col1:
+                try:
+                    st.image(favicon[i])
+                except:
+                    pass
+            with col2:
+            
+                st.header(f"[{title[i]}]({link[i]})")
+            st.markdown(f'{text[i]}')
             st.markdown("---")
             st.write("\n")
     except:
