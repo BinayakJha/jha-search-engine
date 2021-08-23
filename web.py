@@ -1,5 +1,4 @@
 from logging import PlaceHolder
-from PyQt5.QtCore import center
 from numpy.lib.function_base import place
 import requests
 import urllib
