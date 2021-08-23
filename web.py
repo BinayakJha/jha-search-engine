@@ -237,7 +237,9 @@ if query:
             with col2:
             
                 st.header(f"[{title[i]}]({link[i]})")
-            st.markdown(f'{text[i]}')
+            col1,col2 = st.columns([0.5,6])
+            with col2:
+                st.markdown(f'{text[i]}')
             st.markdown("---")
             st.write("\n")
     except:
