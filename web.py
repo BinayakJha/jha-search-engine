@@ -1,4 +1,5 @@
 from logging import PlaceHolder
+from PyQt5.QtCore import center
 from numpy.lib.function_base import place
 import requests
 import urllib
@@ -10,6 +11,11 @@ import people_also_ask
 
 st.set_page_config(page_title="Jha Browser")
 # css 
+st.markdown("""<style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+}
+</style>""", unsafe_allow_html=True)
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
@@ -86,6 +92,10 @@ def parse_results(response):
         css_identifier_favicon = ".favicon"
     except:
         css_identifier_favicon = ""
+    try:
+        css_identifier_thumb= ".thumb"
+    except:
+        css_identifier_thumb = ""
     # related search tab
     results = response.html.find(css_identifier_result)
     
@@ -100,6 +110,7 @@ def parse_results(response):
                 'text': result.find(css_identifier_text, first=True).text, 
 
                 'favicon': result.find(css_identifier_favicon, first=True).attrs['src']
+                
             }
         except:
             item = {
@@ -108,6 +119,10 @@ def parse_results(response):
                 'text': result.find(css_identifier_text, first=True).text, 
                 'favicon': ""
             }
+        try:
+            item['thumb'] = result.find(css_identifier_thumb, first=True).attrs['src']
+        except:
+            item['thumb'] = ""
         
         output.append(item)
         
@@ -210,6 +225,11 @@ if query:
             favicon = df['favicon']
         except:
             favicon = ""
+        try:
+            thumb = df['thumb']
+        except:
+            thumb = ""
+        
         # write title then link and then text
         # add link inside the title
         for i in range(len(title)):
@@ -221,7 +241,7 @@ if query:
                 margin: 8px 2px;
             }
             .css-1v0mbdj img{
-                border-radius:50%;
+                border-radius:5px;
             }
             .css-vtsuw1{
                 bottom: 10px;    
@@ -234,13 +254,74 @@ if query:
                     st.image(favicon[i])
                 except:
                     pass
+
             with col2:
-            
+                
                 st.header(f"[{title[i]}]({link[i]})")
-            col1,col2 = st.columns([0.5,6])
+            col1,col2,col3 = st.columns([0.5,6,1])
             with col2:
                 st.markdown(f'{text[i]}')
             st.markdown("---")
             st.write("\n")
+            try:
+                with col3:
+                   st.image(thumb[i])
+            except:
+                with col3:
+                    
+                    pass
     except:
         st.error("Sorry, No results found :( Please try another query")
+    # imdb column
+    try:
+        url = "https://search.brave.com/search?q="+query
+        st.markdown("<style> html{font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;}</style>", unsafe_allow_html=True)
+        try:
+            session = HTMLSession()
+            response = session.get(url)
+            
+        except requests.exceptions.RequestException as e:
+            print(e)
+
+        title1 =  response.html.find('.infobox-title')[0].text
+        description = response.html.find('.infobox-description')[0].text
+        big_description = response.html.find('.body .mb-6')[0].text
+        rating = response.html.find('.h6')[0].text
+        rating_image = response.html.find('.rating-source')[0].attrs['src']
+        rating_text = response.html.find('.r .flex-hcenter .text-sm ')[0].text
+        
+
+        try:
+            # image
+            img_url = f"https://en.wikipedia.org/wiki/{title1}"
+
+            try:
+                session = HTMLSession()
+                response = session.get(img_url)
+                
+            except requests.exceptions.RequestException as e:
+                print(e)
+
+            image_url = response.html.find('.infobox-image img')[0].attrs['src']
+
+        except:
+            pass
+
+
+
+        # title
+        try:
+            
+            # center the image
+            st.sidebar.markdown(f'<img src="{image_url}" alt="0" style="width: 150px;border-radius: 5px;margin: 0 4.6rem;">', unsafe_allow_html=True)
+            # st.sidebar.image("https:"+image_url, width=150,)
+        except:
+            pass
+        st.sidebar.markdown(f"<h1 style = 'margin:0px 5rem;'>{title1}</h1>", unsafe_allow_html=True)
+        st.sidebar.markdown(f"<p style='margin:15px 3rem;font-size:0.9rem; font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;'>{description}</p>",unsafe_allow_html=True)
+        st.sidebar.write(big_description)
+        st.sidebar.markdown(f"<h1 style = 'margin:0px 5rem;'>{rating}</h1><br>", unsafe_allow_html=True)
+        st.sidebar.markdown(f"<img src='{rating_image}' style='border-radius:20px;'>   &nbsp;  {rating_text}",unsafe_allow_html=True)
+    except:
+        pass
+
