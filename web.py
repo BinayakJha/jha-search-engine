@@ -12,7 +12,6 @@ st.set_page_config(page_title="Jha Browser")
 # css 
 hide_streamlit_style = """
             <style>
-            body {overflow-x:hidden;}
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             .stConnectionStatus{visibility: hidden;}
