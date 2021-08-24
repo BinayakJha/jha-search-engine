@@ -244,10 +244,12 @@ if query:
         title1 =  response.html.find('.infobox-title')[0].text
         description = response.html.find('.infobox-description')[0].text
         big_description = response.html.find('.body .mb-6')[0].text
+        links = response.html.find('.links a')[0].attrs['href']
         try:
             rating = response.html.find('.h6')[0].text
             rating_image = response.html.find('.rating-source')[0].attrs['src']
             rating_text = response.html.find('.r .flex-hcenter .text-sm ')[0].text
+
         except:
             pass
         
@@ -282,7 +284,7 @@ if query:
             pass
         st.sidebar.markdown(f"<h1 style = 'margin:0px 5rem;'>{title1}</h1>", unsafe_allow_html=True)
         st.sidebar.markdown(f"<p style='margin:15px 3rem;font-size:0.9rem; font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;'>{description}</p>",unsafe_allow_html=True)
-        st.sidebar.write(big_description)
+        st.sidebar.write(big_description+f"[Wikipedia]({links})")
         try:
             st.sidebar.markdown(f"<h1 style = 'margin:0px 5rem;'>{rating}</h1><br>", unsafe_allow_html=True)
             st.sidebar.markdown(f"<img src='{rating_image}' style='border-radius:20px;'>   &nbsp;  {rating_text}",unsafe_allow_html=True)
