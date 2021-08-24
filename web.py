@@ -242,7 +242,7 @@ if query:
             with col1:
                 try:
                     favicon_url = "https://www.google.com/s2/favicons?sz=64&domain_url="+link[i]
-                    st.image(favicon_url,width=29)
+                    st.image(favicon_url,width=32)
                 except:
                     pass
 
