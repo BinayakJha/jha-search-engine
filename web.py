@@ -164,6 +164,11 @@ import pandas
 #     except:
 #         st.error("Sorry, No results found :( Please try another query")
 
+# youtube 
+# if youtube.com in link then cut the link and take out watch?v = 
+
+
+# end youtube
 if query:
     placeholder.empty()
     col1, col2, col3,col4,col5,col6,col7= st.columns((0.5,1,1,1,1,1,1))
@@ -203,10 +208,6 @@ if query:
             favicon = df['favicon']
         except:
             favicon = ""
-        try:
-            thumb = df['thumb']
-        except:
-            thumb = ""
         
         # write title then link and then text
         # add link inside the title
@@ -227,10 +228,20 @@ if query:
             }
             """
             st.markdown(style, unsafe_allow_html=True)
+            # try:
+            #     # if link has youtube then do this
+            #     if "youtube" in link[i]:
+            #         link = link[i][32:]
+            #         for i in range(len(link)):
+            #         yt_url = f"https://i.ytimg.com/vi/{link}/hq720.jpg"
+            #         st.image(yt_url)
+            # except:
+            #     pass
+
             # st.link(title[i], link[i])
             with col1:
                 try:
-                    favicon_url = "https://www.google.com/s2/favicons?domain="+link[i]
+                    favicon_url = "https://www.google.com/s2/favicons?sz=64&domain_url="+link[i]
                     st.image(favicon_url,width=29)
                 except:
                     pass
