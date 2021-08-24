@@ -28,6 +28,7 @@ hide_streamlit_style = """
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+st.markdown('''<li role="option" aria-selected="false" aria-disabled="false" class="css-h60zsd e1pxm3bq3" ><span class="css-1qkncxf e1pxm3bq4" style = "visibisity:hidden">About Streamlit sharing</span></li>''', unsafe_allow_html=True)
 placeholder = st.markdown("<h1 style='text-align: center;margin-top:-60px;'>Jha Browser</h1><p style='text-align:center;'>Fast, Secure, Full privacy control to the user, Non tracking Browser</p><p  style='text-align:center;margin-bottom:-2px;'>Search Here!!</p>", unsafe_allow_html=True)
 def get_source(url):
     try:
@@ -55,7 +56,7 @@ with col2:
     st.markdown(button, unsafe_allow_html=True)
     st.button("Search")
 #  on click change to dark theme
-st.markdown('''<li role="option" aria-selected="false" aria-disabled="false" class="css-h60zsd e1pxm3bq3" style = "visibisity:hidden"><span class="css-1qkncxf e1pxm3bq4">About Streamlit sharing</span></li>''', unsafe_allow_html=True)
+
  
 
 
