@@ -260,7 +260,7 @@ if query:
         try:
             
             # center the image
-            st.sidebar.markdown(f'<img src="{image_url}" alt="0" style="width: 150px;border-radius: 5px;margin: 0 4.6rem;">', unsafe_allow_html=True)
+            st.sidebar.markdown(f'<img src="{image_url}" alt="0" style="width: 100%;border-radius: 5px;">', unsafe_allow_html=True)
             # st.sidebar.image("https:"+image_url, width=150,)
         except:
             pass
