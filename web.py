@@ -54,7 +54,8 @@ with col2:
 """
     st.markdown(button, unsafe_allow_html=True)
     st.button("Search")
-
+#  on click change to dark theme
+st.markdown('''<li role="option" aria-selected="false" aria-disabled="false" class="css-h60zsd e1pxm3bq3" style = "visibisity:hidden"><span class="css-1qkncxf e1pxm3bq4">About Streamlit sharing</span></li>''', unsafe_allow_html=True)
  
 
 
