@@ -154,10 +154,11 @@ if query:
                     response = session.get(url)
                     title = response.html.find('title', first=True).text
                     featured_answer1 = featured_answer.split("youtube.com/watch?v=")[1]
-                    # yt_url1 = f"https://i.ytimg.com/vi/{featured_answer1}/0.jpg"
+                    yt_url1 = f"https://i.ytimg.com/vi/{featured_answer1}/0.jpg"
                     # st.markdown(f"<a href='{featured_answer}' target='_blank'><img src ='{yt_url1}' style='width: 80%;border-radius:5px;'></a>",unsafe_allow_html=True)
-                    
-                    st.markdown(f'<iframe height="400" src="https://www.youtube.com/embed/{featured_answer1}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style = "width:90%;"></iframe>',unsafe_allow_html=True)
+                    # open embed video direct in youtube
+                    # st.markdown(f"<a href='https://www.youtube.com/embed/{featured_answer1}' target='_blank'><img src ='{yt_url1}' style='width: 80%;border-radius:5px;'></a>",unsafe_allow_html=True)
+                    st.markdown(f'<a href="{yt_url1}" target="_blank"><iframe height="400" src="https://www.youtube.com/embed/{featured_answer1}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style = "width:90%;border-radius:5px;"></iframe></a>',unsafe_allow_html=True)
                     st.header(f"[{title}]({featured_answer})")
                 else:
                     st.markdown(featured_answer,unsafe_allow_html=True)
