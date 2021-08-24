@@ -148,7 +148,17 @@ if query:
             col1,col2 = st.columns([0.5,6]) 
             with col2:            
                 featured_answer = people_also_ask.get_simple_answer(query)
-                st.write(featured_answer)
+                if "youtube.com/watch?v" in featured_answer:
+                    url = featured_answer
+                    session = HTMLSession()
+                    response = session.get(url)
+                    title = response.html.find('title', first=True).text
+                    featured_answer1 = featured_answer.split("youtube.com/watch?v=")[1]
+                    yt_url1 = f"https://i.ytimg.com/vi/{featured_answer1}/0.jpg"
+                    st.markdown(f"<a href='{featured_answer}' target='_blank'><img src ='{yt_url1}' style='width: 80%;border-radius:5px;'></a>",unsafe_allow_html=True)
+                    st.header(f"[{title}]({featured_answer})")
+                else:
+                    st.markdown(featured_answer,unsafe_allow_html=True)
             st.markdown('---')
             st.write("\n")
         except:
