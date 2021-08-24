@@ -14,6 +14,7 @@ st.markdown("""<style>@import url('https://fonts.googleapis.com/css2?family=Popp
 body {
     font-family: 'Poppins', sans-serif;
 }
+.css-1u0jg5e {visibility: hidden;}
 </style>""", unsafe_allow_html=True)
 hide_streamlit_style = """
             <style>
@@ -22,6 +23,7 @@ hide_streamlit_style = """
             footer {visibility: hidden;}
             .stConnectionStatus{visibility: hidden;}
             .viewerBadge_container__1QSob {visibility: hidden !important;}
+
              body { overflow-x:hidden;}
             </style>
             """
@@ -116,53 +118,7 @@ results = google_search(query)
 import pandas
 # export results to csv file
 
-# a = st.button("")
 
-# if a:
-#     # hide the a button
-#     col1, col2, col3,col4,col5,col6,col7= st.columns(7)
-#     with col1:
-#         all = st.markdown("All")
-#     with col2:
-#         images = st.markdown("Images")
-#     with col3:
-#         videos = st.markdown("News")
-#     with col4:
-#         maps = st.markdown("Videos")
-#     with col5:
-#         st.write("")
-#     with col6:
-#         st.write("")
-#     with col7:
-#         st.markdown("Info")
-
-
-
-#     try:
-#         try:
-#             st.header('Featured answer :')
-#             col1,col2 = st.columns([0.5,6]) 
-#             with col2:            
-#                 featured_answer = people_also_ask.get_simple_answer(query)
-#                 st.write(featured_answer)
-#             st.markdown('---')
-#             st.write("\n")
-#         except:
-#             pass
-#         df = pandas.DataFrame(results)
-#         title = df['title']
-#         link = df['link']
-#         text = df['text']
-
-#         for i in range(len(title)):
-#             st.header(title[i])
-#             st.markdown(link[i])
-#             st.text(text[i])
-#             st.markdown("---")
-
-#             st.write("\n")
-#     except:
-#         st.error("Sorry, No results found :( Please try another query")
 
 # youtube 
 # if youtube.com in link then cut the link and take out watch?v = 
@@ -203,6 +159,7 @@ if query:
         title = df['title']
         link = df['link']
         text = df['text']
+        link2 = df['link']
         try:
            
             favicon = df['favicon']
@@ -228,15 +185,7 @@ if query:
             }
             """
             st.markdown(style, unsafe_allow_html=True)
-            # try:
-            #     # if link has youtube then do this
-            #     if "youtube" in link[i]:
-            #         link = link[i][32:]
-            #         for i in range(len(link)):
-            #         yt_url = f"https://i.ytimg.com/vi/{link}/hq720.jpg"
-            #         st.image(yt_url)
-            # except:
-            #     pass
+           
 
             # st.link(title[i], link[i])
             with col1:
@@ -250,13 +199,25 @@ if query:
                 
                 st.header(f"[{title[i]}]({link[i]})")
             col1,col2 = st.columns([0.5,6])
-            with col2:
+                # If youtube in favicon url then show image
+                # if image is not loaded then pass
+            if "youtube.com" in favicon_url:
+                        col1,col2 = st.columns([6,2])
+                        with col1:
+                             st.markdown(f'{text[i]}')
+                        with col2:
+
+                            if "/watch?v" in link[i]:
+                                link3 = link[i][32:]
+                                yt_url = f"https://i.ytimg.com/vi/{link3}/0.jpg"
+                                st.markdown(f"<img src ='{yt_url}' style='width: 100%;border-radius:5px;'>",unsafe_allow_html=True)
+                    # if not then leave the space
+            else:
                 st.markdown(f'{text[i]}')
             st.markdown("---")
             st.write("\n")
     except:
         st.error("Sorry, No results found :( Please try another query")
-    # imdb column
     try:
         url = "https://search.brave.com/search?q="+query
         st.markdown("<style> html{font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;}</style>", unsafe_allow_html=True)
@@ -273,7 +234,9 @@ if query:
         rating = response.html.find('.h6')[0].text
         rating_image = response.html.find('.rating-source')[0].attrs['src']
         rating_text = response.html.find('.r .flex-hcenter .text-sm ')[0].text
-        
+    
+# wikipedia image scraping
+
 
         try:
             # image
