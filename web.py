@@ -19,7 +19,7 @@ body {
 hide_streamlit_style = """
             <style>
             
-            #MainMenu {visibility: hidden;}
+            # #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             .stConnectionStatus{visibility: hidden;}
             .viewerBadge_container__1QSob {visibility: hidden !important;}
@@ -43,9 +43,13 @@ with col1:
 with col2:
     button = """
 <style>
-    .css-1ubkpyc{margin:21px -1px;padding: 18px 35px 14px 35px;-webkit-margin:21px -1px;-webkit-padding:18px 35px 14px 35px;-moz-margin:21px -1px;-moz-padding:18px 35px 14px 35px;-ms-margin:21px -1px;-ms-padding:18px 35px 14px 35px;-o-margin:21px -1px;-o-padding:18px 35px 14px 35px;}
+    .css-1ubkpyc{margin:21px -1px;padding: 18px 35px 14px 35px;}
+    .css-lybem{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;}
+    .st-br{border:1px solid grey;border-bottom-color:grey}
+    .st-bc{padding:8px !important;}
     .stButton{margin:-8px;}
-    .st-bc{padding: 7px}
+    hr{background-color: #d8c2c2e0;}
+
 </style>
 """
     st.markdown(button, unsafe_allow_html=True)
