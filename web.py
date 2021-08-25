@@ -13,6 +13,7 @@ st.set_page_config(page_title="Jha Browser")
 st.markdown("""<style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 body {
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 .css-1u0jg5e {visibility: hidden;}
 </style>""", unsafe_allow_html=True)
@@ -50,6 +51,7 @@ with col2:
     .st-br{border:1px solid grey;border-bottom-color:grey}
     .st-bc{padding:8px !important;}
     .stButton{margin:-8px;}
+    .css-ip91b3{width:22rem}
     hr{background-color: #d8c2c2e0;}
 
 </style>
@@ -224,7 +226,7 @@ if query:
             if "youtube.com" in favicon_url:
                         col1,col2 = st.columns([6,2])
                         with col1:
-                             st.markdown(f'{text[i]}')
+                             st.markdown(f'{text[i][0:300]}')
                         with col2:
 
                             if "/watch?v" in link[i]:
@@ -233,7 +235,7 @@ if query:
                                 st.markdown(f"<img src ='{yt_url}' style='width: 100%;border-radius:5px;'>",unsafe_allow_html=True)
                     # if not then leave the space
             else:
-                st.markdown(f'{text[i]}')
+                st.markdown(f'{text[i][0:300]}')
             st.markdown("---")
             st.write("\n")
     except:
@@ -294,7 +296,7 @@ if query:
         st.sidebar.markdown(f"<p style='margin:15px 3rem;font-size:0.9rem; font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;'>{description}</p>",unsafe_allow_html=True)
         st.sidebar.write(big_description+f"[Wikipedia]({links})")
         try:
-            st.sidebar.markdown(f"<h1 style = 'margin:0px 5rem;'>{rating}</h1><br>", unsafe_allow_html=True)
+            st.sidebar.markdown(f"<h1 style = 'margin:0px 5rem;'>Ratings</h1><br>", unsafe_allow_html=True)
             st.sidebar.markdown(f"<img src='{rating_image}' style='border-radius:20px;'>   &nbsp;  {rating_text}",unsafe_allow_html=True)
         except:
             pass
