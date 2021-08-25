@@ -183,7 +183,7 @@ if query:
                     st.markdown(featured_answer,unsafe_allow_html=True)
                 if featured_answer == "":
                     try:
-                        st.markdown('<h3>Defination</h3>',unsafe_allow_html=True)
+                        st.markdown('<h3>Definition</h3>',unsafe_allow_html=True)
                         # replace meaning of or defination of with space
                         if "meaning of" in query:
                             query = query.replace("meaning of","")
