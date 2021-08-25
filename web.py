@@ -46,13 +46,20 @@ with col2:
     button = """
 <style>
     .css-1ubkpyc{margin:21px -1px;padding: 18px 35px 14px 35px;}
-    .css-lybem{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;}
+    .css-lybem{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
     .css-qbe2hs{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;}
-    .st-br{border:1px solid grey;border-bottom-color:grey}
-    .st-bc{padding:8px !important;}
+    .css-n19jqu:hover{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
+    .css-n19jqu{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
+    .st-br{border:1px solid grey;border-bottom-color:grey;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;padding:8px}
+    .st-bc{padding:8px !important;background:transparent}
+    .st-go{background: transparent;}
+    .st-bs{background:transparent}
+    .st-bx{background:transparent}
     .stButton{margin:-8px;}
-    .css-ip91b3{width:22rem}
-    hr{background-color: #d8c2c2e0;}
+    .css-hi6a2p{max-width:850px !important ;}
+    .css-ip91b3{width:22rem;}
+    .css-pday0i{width:24rem;background:#7b77771c;}
+    .css-hi6a2p {flex: 1 1 0%;width: 100%;padding: 2.5rem 1rem 6rem;max-width: 730px;}
 
 </style>
 """
@@ -295,7 +302,6 @@ if query:
 
         try:
             # image
-            # img_url = f"https://en.wikipedia.org/wiki/{title1}"
             img_url = links
 
             try:
