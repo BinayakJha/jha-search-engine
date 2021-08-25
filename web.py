@@ -100,8 +100,12 @@ def parse_results(response):
     css_identifier_link = ".yuRUbf a"
     css_identifier_text = ".IsZvec"
     # related search tab
-    css_identifier_featured=".di3YZe"
+    css_identifier_featured=".GyAeWb"
     results = response.html.find(css_identifier_result)
+    # related search tab
+   
+
+
     
 
     output = []
@@ -164,17 +168,40 @@ if query:
                     title = response.html.find('title', first=True).text
                     featured_answer1 = featured_answer.split("youtube.com/watch?v=")[1]
                     yt_url1 = f"https://i.ytimg.com/vi/{featured_answer1}/0.jpg"
-                    # st.markdown(f"<a href='{featured_answer}' target='_blank'><img src ='{yt_url1}' style='width: 80%;border-radius:5px;'></a>",unsafe_allow_html=True)
-                    # open embed video direct in youtube
-                    # st.markdown(f"<a href='https://www.youtube.com/embed/{featured_answer1}' target='_blank'><img src ='{yt_url1}' style='width: 80%;border-radius:5px;'></a>",unsafe_allow_html=True)
                     st.markdown(f'<a href="{yt_url1}" target="_blank"><iframe height="400" src="https://www.youtube.com/embed/{featured_answer1}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style = "width:90%;border-radius:5px;"></iframe></a>',unsafe_allow_html=True)
                     st.header(f"[{title}]({featured_answer})")
                 else:
                     st.markdown(featured_answer,unsafe_allow_html=True)
+                if featured_answer == "":
+                    try:
+                        st.markdown('<h3>Defination</h3>',unsafe_allow_html=True)
+                        # replace meaning of or defination of with space
+                        if "meaning of" in query:
+                            query = query.replace("meaning of","")
+                        if "defination of" in query:
+                            query = query.replace("defination of","")
+                        # replace the word with space
+                        if " " in query:
+                            query = query.replace(" ","")
+                        if 'meaning' in query:
+                            query = query.replace('meaning',"")
+                        if 'defination' in query:
+                            query = query.replace('defination',"")
+                        
+                        url = "https://www.vocabulary.com/dictionary/" + query
+                        session = HTMLSession()
+                        response = session.get(url)
+                        defination = response.html.find('.definition', first=True).text
+                        defination2 = defination[0:4]
+                        defination3 = defination[4:]
+                        st.markdown(f'<p><b>{defination2}</b> → {defination3}</p>',unsafe_allow_html=True)
+                    except:
+                        pass
+
             st.markdown('---')
             st.write("\n")
         except:
-            st.write('No Featured answer found!')
+           
             pass
         df = pandas.DataFrame(results)
 
@@ -302,4 +329,4 @@ if query:
             pass
     except:
         pass
-
+    
