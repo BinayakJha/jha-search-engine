@@ -198,6 +198,10 @@ if query:
                             query = query.replace('meaning',"")
                         if 'defination' in query:
                             query = query.replace('defination',"")
+                        if 'what is' in query:
+                            query = query.replace('what is',"")
+                        if 'What is' in query:
+                            query = query.replace('What is',"")
                         
                         url = "https://www.vocabulary.com/dictionary/" + query
                         session = HTMLSession()
