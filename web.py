@@ -48,13 +48,15 @@ with col2:
     .css-1ubkpyc{margin:21px -1px;padding: 18px 35px 14px 35px;}
     .css-lybem{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
     .css-qbe2hs{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;}
-    # .css-n19jqu:hover{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
-    .css-n19jqu{margin:22px 1px;padding: 21px 50px 14px 50px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
+    # .css-n19jqu:hover{margin:22px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
+    .css-n19jqu{margin:22px 1px;padding: 23px 50px 14px 50px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
     .st-br{border:1px solid grey;border-bottom-color:grey;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;padding:8px !important}
     .st-bc{padding:8px !important;background:transparent}
     .st-go{background: transparent;}
     .st-bs{background:transparent}
     .st-bx{background:transparent}
+    .st-bu{background:transparent}
+    .st-cl{padding: 8px;}
     .stButton{margin:-8px;}
     .css-1ko0gb7{margin:0px 0px 1rem;}
     .css-hi6a2p{max-width:1000px !important ;background:white;padding: 2.5rem 1.5rem 6rem !important;}
