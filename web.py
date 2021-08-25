@@ -264,7 +264,8 @@ if query:
 
         try:
             # image
-            img_url = f"https://en.wikipedia.org/wiki/{title1}"
+            # img_url = f"https://en.wikipedia.org/wiki/{title1}"
+            img_url = links
 
             try:
                 session = HTMLSession()
