@@ -46,6 +46,7 @@ with col2:
 <style>
     .css-1ubkpyc{margin:21px -1px;padding: 18px 35px 14px 35px;}
     .css-lybem{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;}
+    .css-qbe2hs{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;}
     .st-br{border:1px solid grey;border-bottom-color:grey}
     .st-bc{padding:8px !important;}
     .stButton{margin:-8px;}
