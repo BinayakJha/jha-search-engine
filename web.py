@@ -192,7 +192,7 @@ if query:
                         session = HTMLSession()
                         response = session.get(url)
                         defination = response.html.find('.definition', first=True).text
-                        defination2 = defination[0:4]
+                        defination2 = response.html.find('.pos-icon', first=True).text
                         defination3 = defination[4:]
                         st.markdown(f'<p><b>{defination2}</b> → {defination3}</p>',unsafe_allow_html=True)
                     except:
