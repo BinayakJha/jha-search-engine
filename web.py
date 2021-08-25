@@ -49,17 +49,19 @@ with col2:
     .css-lybem{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
     .css-qbe2hs{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;}
     # .css-n19jqu:hover{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
-    .css-n19jqu{margin:22px -1px;padding: 21px 35px 13px 35px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
+    .css-n19jqu{margin:22px 1px;padding: 21px 50px 14px 50px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
     .st-br{border:1px solid grey;border-bottom-color:grey;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;padding:8px !important}
     .st-bc{padding:8px !important;background:transparent}
     .st-go{background: transparent;}
     .st-bs{background:transparent}
     .st-bx{background:transparent}
     .stButton{margin:-8px;}
-    .css-hi6a2p{max-width:850px !important ;}
+    .css-1ko0gb7{margin:0px 0px 1rem;}
+    .css-hi6a2p{max-width:1000px !important ;background:white;padding: 2.5rem 1.5rem 6rem !important;}
     .css-ip91b3{width:22rem;}
     .css-pday0i{width:24rem;background:#7b77771c;}
-    .css-hi6a2p {flex: 1 1 0%;width: 100%;padding: 2.5rem 1rem 6rem;max-width: 730px;}
+    .css-hi6a2p {flex: 1 1 0%;width: 100%;padding: 2.5rem 1rem 6rem;max-width: 730px;margin: 53px;border-radius: 5px;}
+    hr {margin: 1em 3px;padding: 0px;color: inherit;background-color: transparent;border-top: none;border-right: none;border-left: none;border-image: initial;border-bottom: 21px solid #f0f5f7!important;margin: 12px -32px;border-radius: 5px;}
 
 </style>
 """
@@ -270,7 +272,7 @@ if query:
                                 st.markdown(f"<img src ='{yt_url}' style='width: 100%;border-radius:5px;'>",unsafe_allow_html=True)
                     # if not then leave the space
             else:
-                st.markdown(f'{text[i][0:300]}')
+                st.markdown(f'{text[i][0:500]}')
             st.markdown("---")
             st.write("\n")
     except:
