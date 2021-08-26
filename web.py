@@ -134,16 +134,6 @@ if changer == True:
             ::-webkit-scrollbar-track {
             background: rgb(44, 43, 43);
             }
-
-            /* Handle */
-            ::-webkit-scrollbar-thumb {
-            background:white;
-            }
-
-            /* Handle on hover */
-            ::-webkit-scrollbar-thumb:hover {
-            background: white;
-            }
             </style>""", unsafe_allow_html=True)
 # while changing the theme add some transition
 elif changer == False:
@@ -251,7 +241,7 @@ if query:
     st.markdown("""<style>
     .stCheckbox{visibility:hidden;}
     .st-df{padding:0px;}
-        .st-cn{margin:0px;padding:0px;}
+    .st-cn{margin:0px;padding:0px;}
     </style>""", unsafe_allow_html=True)
     col1, col2, col3, col4, col5, col6, col7 = st.columns(
         (0.5, 1, 1, 1, 1, 1, 1))
