@@ -95,7 +95,7 @@ if changer == True:
     st.markdown("""
             <style>
             .st-df{padding:10px;}
-            .st-cn{margin:90px 40%;padding:20px;border-radius:5px;background-color:#ee7274 !important;font-size:1.2em;font-family: 'Poppins', sans-serif;}
+            .st-cn{margin:-396px 791px 0px -15px;padding:20px;border-radius:5px;background-color:#ee7274 !important;font-size:1.2em;font-family: 'Poppins', sans-serif;}
             .css-1djdyxw{color:white !important}
             .css-hi6a2p{background-color:#242731 !important}
             .css-1ubkpyc{margin:21px -1px;padding: 18px 35px 14px 35px;}
@@ -139,7 +139,7 @@ if changer == True:
 elif changer == False:
     st.markdown("""<style>
         .st-df{padding:10px;}
-        .st-cn{margin:90px 40%;padding:20px;border-radius:5px;background-color:#ee7274 !important;font-size:1.2em;font-family: 'Poppins', sans-serif;}
+        .st-cn{margin:-410px 791px 0px -15px;padding:20px;border-radius:5px;background-color:#ee7274 !important;font-size:1.2em;font-family: 'Poppins', sans-serif;}
             .css-hi6a2p{background-color:white !important}
             .css-1ubkpyc{margin:21px -1px;padding: 18px 35px 14px 35px;}
             .css-lybem{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
@@ -238,11 +238,6 @@ results = google_search(query)
 # end youtube
 if query:
     placeholder.empty()
-    st.markdown("""<style>
-    .stCheckbox{visibility:hidden;}
-    .st-df{padding:0px;}
-    .st-cn{margin:0px;padding:0px;}
-    </style>""", unsafe_allow_html=True)
     col1, col2, col3, col4, col5, col6, col7 = st.columns(
         (0.5, 1, 1, 1, 1, 1, 1))
     with col1:
