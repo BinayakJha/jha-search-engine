@@ -531,6 +531,7 @@ if query:
     st.markdown("""<style>
      .css-1djdyxw{margin:0px !important;visibiltiy:hidden;}
     .stCheckbox{visibility:hidden;margin:0px!important;}
+    .css-feqc82{width:493px !important;}
         .css-1v3fvcr{
             overflow-x:hidden;
             overflow-y:auto;
