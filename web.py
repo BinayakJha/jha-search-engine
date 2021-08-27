@@ -37,7 +37,7 @@ hide_streamlit_style = """
             svg .css-xq1lnh-EmotionIconBase  {visibility: hidden !important;}
             .css-o9wq0b {visibility: hidden !important;}
             .css-31hhpn {visibility: hidden !important;}
-             body { overflow-x:hidden;}
+             body { overflow-x:hidden;overflow-y:hidden; }
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
@@ -62,7 +62,7 @@ st.markdown("""
 position: absolute;
 width: 187px;
 height: 187px;
-left: 977px;
+left: 927px;
 top: -219px;
 background: url('https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg'), #C4C4C4;
 border: 7px solid #FFFFFF;
