@@ -137,86 +137,84 @@ def get_source(url):
 
 
 
-
 query = st.text_input("",)
-
 button = """
-<style>
-            .st-df{padding:10px;}
-            .st-cn{margin:90px 40%;padding:20px;border-radius:5px;background-color:#ee7274 !important;font-size:1.2em;font-family: 'Poppins', sans-serif;}
-            .stCheckbox span{visibility:hidden;}
-            # .css-hi6a2p{background-color:white !important}
-            .css-1ubkpyc{margin:21px -1px;padding: 18px 35px 14px 35px;}
-            .css-lybem{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
-            .css-qbe2hs{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;}
-            .css-n19jqu:hover{background:#ee7274 !important; color:white !important;}
-            .css-n19jqu{margin:34px 41.5%;padding:19px 58px !important;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;background:#ee7274 !important;color:black;}
-            .st-br{border:1px solid grey;border-bottom-color:grey;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;padding:8px !important}
-            .st-bc{padding:9px !important;background:transparent}
-            .st-go{background: transparent !important;}
-            .st-bs{background:transparent !important;}
-            .st-bx{background:transparent !important;}
-            .st-bu{background:transparent !important;}
-            .st-cz{background:transparent !important;}
-            .st-cl{padding: 9px !important;}
-            .st-bg{padding: 9px !important;}
-            .st-bv{background:transparent !important;}
-            # #heading{font-family: Poppins;font-style: normal;font-weight: 600;font-size: 96px;line-height: 144px;letter-spacing: -0.02em;letter-spacing: -0.02em !important;color: #000000;position: relative;height: 100%;width: 100%;bottom: 9px;top:12vh; }
-            #heading{
-                    # width: 500px;
-                    height: 144px;
-                    left: 550px;
-                    top: 386px;
-                    font-family: Poppins;
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 96px;
-                    line-height: 185px;
-                    letter-spacing: -0.02em;
-            }
-            .stButton{margin:0px!important;}
-            .css-1ko0gb7{margin:0px 0px 1rem !important;}
-            .css-hi6a2p{max-width:1000px !important ;padding: 2.5rem 1.5rem 6rem !important;}
-            h1,h2,h3,h4,h5,h6,p,b,i{color:black!important;font-family: 'Poppins', sans-serif !important;}
-            .css-ip91b3{width:22rem !important;}
-            .css-pday0i{width:24rem;background:white !important;}
-            a{color:#1a0dab!important;text-decoration:none !important;}
-            .css-hi6a2p {flex: 1 1 0%;width: 100%;padding: 2.5rem 1rem 6rem;max-width: 730px;margin: 53px;border-radius: 5px;}
-            hr {margin: 1em 3px;padding: 0px;color: inherit;background-color: transparent;border-top: none;border-right: none;border-left: none;border-image: initial;border-bottom: 21px solid #f0f5f7!important;margin: 12px -32px;border-radius: 5px;}
-            .css-feqc82 {
-            position: relative;
-            width: 584px;
-            justify-content: center;
-            left: 188px;
-            top: 34px;
-            # margin: 7vh 0vw 0 4vw;
-            }
-            .css-1sry6mp , .css-16xd7h, .css-47n5yn,.css-18pr10j,.css-nn3r2c,.css-18kfq8s,.css-11i2q6c,.css-11tp6y0,.css-pbvyo7,.css-r2fnjw,.css-oy2m8b,.css-11wmr1h,.css-yyyoaw,.css-jb9642,.css-nwse0c,.css-a72296,.css-1rzvowm,.css-upbzir,.css-3xxbtp,.css-1k7n4nm,.css-1ttvahg,.css-1acsqd8,.css-zcv45d,.css-1sry6mp,.css-o4v7a2{
-                width: 584px;
-                height: 46px;
-                left: 508px;
-                top: 534px;
-                background: #FFFFFF;
-                border: 1px solid #DFE1E5;
-                box-sizing: border-box;
-                border-radius: 8px;
-                margin: 7vh 0vw 0 4vw;
-            }
-            .css-1bi8zkq{
-                width: 518px;
-                margin: 7vh 0vw 0 4vw !important;
-            }
-            @media screen and (max-width: 530px) {
-                .css-n19jqu{
-                    margin:0 37.5% !important;
+    <style>
+                .st-df{padding:10px;}
+                .st-cn{margin:90px 40%;padding:20px;border-radius:5px;background-color:#ee7274 !important;font-size:1.2em;font-family: 'Poppins', sans-serif;}
+                .stCheckbox span{visibility:hidden;}
+                # .css-hi6a2p{background-color:white !important}
+                .css-1ubkpyc{margin:21px -1px;padding: 18px 35px 14px 35px;}
+                .css-lybem{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
+                .css-qbe2hs{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;}
+                .css-n19jqu:hover{background:#ee7274 !important; color:white !important;}
+                .css-n19jqu{margin:34px 41.5%;padding:19px 58px !important;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;background:#ee7274 !important;color:black;}
+                .st-br{border:1px solid grey;border-bottom-color:grey;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;padding:8px !important}
+                .st-bc{padding:9px !important;background:transparent}
+                .st-go{background: transparent !important;}
+                .st-bs{background:transparent !important;}
+                .st-bx{background:transparent !important;}
+                .st-bu{background:transparent !important;}
+                .st-cz{background:transparent !important;}
+                .st-cl{padding: 9px !important;}
+                .st-bg{padding: 9px !important;}
+                .st-bv{background:transparent !important;}
+                # #heading{font-family: Poppins;font-style: normal;font-weight: 600;font-size: 96px;line-height: 144px;letter-spacing: -0.02em;letter-spacing: -0.02em !important;color: #000000;position: relative;height: 100%;width: 100%;bottom: 9px;top:12vh; }
+                #heading{
+                        # width: 500px;
+                        height: 144px;
+                        left: 550px;
+                        top: 386px;
+                        font-family: Poppins;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 96px;
+                        line-height: 185px;
+                        letter-spacing: -0.02em;
                 }
-            }
-        .css-1v3fvcr{
-            overflow-x:hidden;
-            overflow-y:hidden;
-            }
-</style>
-"""
+                .stButton{margin:0px!important;}
+                .css-1ko0gb7{margin:0px 0px 1rem !important;}
+                .css-hi6a2p{max-width:1000px !important ;padding: 2.5rem 1.5rem 6rem !important;}
+                h1,h2,h3,h4,h5,h6,p,b,i{color:black!important;font-family: 'Poppins', sans-serif !important;}
+                .css-ip91b3{width:22rem !important;}
+                .css-pday0i{width:24rem;background:white !important;}
+                a{color:#1a0dab!important;text-decoration:none !important;}
+                .css-hi6a2p {flex: 1 1 0%;width: 100%;padding: 2.5rem 1rem 6rem;max-width: 730px;margin: 53px;border-radius: 5px;}
+                hr {margin: 1em 3px;padding: 0px;color: inherit;background-color: transparent;border-top: none;border-right: none;border-left: none;border-image: initial;border-bottom: 21px solid #f0f5f7!important;margin: 12px -32px;border-radius: 5px;}
+                .css-feqc82 {
+                position: relative;
+                width: 584px;
+                justify-content: center;
+                left: 188px;
+                top: 34px;
+                # margin: 7vh 0vw 0 4vw;
+                }
+                .css-1sry6mp , .css-16xd7h, .css-47n5yn,.css-18pr10j,.css-nn3r2c,.css-18kfq8s,.css-11i2q6c,.css-11tp6y0,.css-pbvyo7,.css-r2fnjw,.css-oy2m8b,.css-11wmr1h,.css-yyyoaw,.css-jb9642,.css-nwse0c,.css-a72296,.css-1rzvowm,.css-upbzir,.css-3xxbtp,.css-1k7n4nm,.css-1ttvahg,.css-1acsqd8,.css-zcv45d,.css-1sry6mp,.css-o4v7a2{
+                    width: 584px;
+                    height: 46px;
+                    left: 508px;
+                    top: 534px;
+                    background: #FFFFFF;
+                    border: 1px solid #DFE1E5;
+                    box-sizing: border-box;
+                    border-radius: 8px;
+                    margin: 7vh 0vw 0 4vw;
+                }
+                .css-1bi8zkq{
+                    width: 518px;
+                    margin: 7vh 0vw 0 4vw !important;
+                }
+                @media screen and (max-width: 530px) {
+                    .css-n19jqu{
+                        margin:0 37.5% !important;
+                    }
+                }
+            .css-1v3fvcr{
+                overflow-x:hidden;
+                overflow-y:hidden;
+                }
+    </style>
+    """
 st.markdown(button, unsafe_allow_html=True)
 st.button("Search")
 #  on click change to dark theme
@@ -365,7 +363,7 @@ results = google_search(query)
 # youtube
 # if youtube.com in link then cut the link and take out watch?v =
 
-
+# -59px ​0
 # end youtube
 if query:
     st.markdown("""<style>
@@ -377,7 +375,17 @@ if query:
      .images1,  .images2, .images3, .bottom_images1, .bottom_images2, .bottom_images3{
          display:none;
      }
+     .css-n19jqu{
+    margin:-123px 74.5%;
+    position:absolute;
+}
+.css-feqc82{
+    top:-25px;
+    left:114px;
+}
+     .css-hlxwf4{margin:-59px 0 !important !important;}
      </style>""", unsafe_allow_html=True)
+   
     placeholder.empty()
     col1, col2, col3, col4, col5, col6, col7 = st.columns(
         (0.5, 1, 1, 1, 1, 1, 1))
