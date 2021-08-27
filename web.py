@@ -20,7 +20,7 @@ st.markdown("""
 # css
 st.markdown("""
 <style>@import url('@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+*{overflow-y:hidden;font-family: 'Poppins', sans-serif;}
 body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
@@ -211,6 +211,10 @@ button = """
                     margin:0 37.5% !important;
                 }
             }
+        .css-1v3fvcr{
+            overflow-x:hidden;
+            overflow-y:hidden;
+            }
 </style>
 """
 st.markdown(button, unsafe_allow_html=True)
@@ -365,6 +369,10 @@ results = google_search(query)
 # end youtube
 if query:
     st.markdown("""<style>
+        .css-1v3fvcr{
+            overflow-x:hidden;
+            overflow-y:auto;
+            }
      .css-hi6a2p{background-color:white !important}
      .images1,  .images2, .images3, .bottom_images1, .bottom_images2, .bottom_images3{
          display:none;
