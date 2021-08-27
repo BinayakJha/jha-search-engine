@@ -96,7 +96,7 @@ border-radius: 8px;
     background: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg'), #C4C4C4;
     border: 9px solid #FFFFFF;
     border-radius: 8px;
-    margin:-200px -320px;
+    margin:--216px -222px;
     z-index: 1;
 }
 .bottom_images2{
