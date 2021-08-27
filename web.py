@@ -11,8 +11,16 @@ import streamlit as st
 import people_also_ask
 
 st.set_page_config(page_title="Jha Browser")
+st.markdown("""
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+""", unsafe_allow_html=True)
 # css
-st.markdown("""<style>@import url('@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+st.markdown("""
+<style>@import url('@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
@@ -75,7 +83,7 @@ with col2:
             .st-cl{padding: 9px !important;}
             .st-bg{padding: 9px !important;}
             .st-bv{background:transparent}
-            #heading{font-size:7rem !important;}
+            #heading{font-size:7rem !important;font-family: 'Righteous', cursive !important;}
             .stButton{margin:-8px;}
             .css-1ko0gb7{margin:0px 0px 1rem;}
             .css-hi6a2p{max-width:1000px !important ;background:white;padding: 2.5rem 1.5rem 6rem !important;}
@@ -90,6 +98,7 @@ with col2:
     st.markdown(button, unsafe_allow_html=True)
     st.button("Search")
 #  on click change to dark theme
+# st.markdown("<p style='margin:-396px 791px 0px -15px;z-index:0;color:black;'>hello</p>", unsafe_allow_html=True)
 changer = st.checkbox("Change Theme")
 if changer == True:
     st.markdown("""
