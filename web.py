@@ -75,22 +75,22 @@ with col2:
             .css-n19jqu{margin:21px 7px;padding:19px 43px !important;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;background:#ee7274 !important;color:black;}
             .st-br{border:1px solid grey;border-bottom-color:grey;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;padding:8px !important}
             .st-bc{padding:9px !important;background:transparent}
-            .st-go{background: transparent;}
-            .st-bs{background:transparent}
-            .st-bx{background:transparent}
-            .st-bu{background:transparent}
-            .st-cz{background:transparent}
+            .st-go{background: transparent !important;}
+            .st-bs{background:transparent !important;}
+            .st-bx{background:transparent !important;}
+            .st-bu{background:transparent !important;}
+            .st-cz{background:transparent !important;}
             .st-cl{padding: 9px !important;}
             .st-bg{padding: 9px !important;}
-            .st-bv{background:transparent}
+            .st-bv{background:transparent !important;}
             #heading{font-size:7rem !important;font-family: 'Righteous', cursive !important;}
-            .stButton{margin:-8px;}
-            .css-1ko0gb7{margin:0px 0px 1rem;}
+            .stButton{margin:-8px !important;}
+            .css-1ko0gb7{margin:0px 0px 1rem !important;}
             .css-hi6a2p{max-width:1000px !important ;background:white;padding: 2.5rem 1.5rem 6rem !important;}
-            h1,h2,h3,h4,h5,h6,p,b,i{color:black!important;font-family: 'Poppins', sans-serif;}
-            .css-ip91b3{width:22rem;}
-            .css-pday0i{width:24rem;background:white;}
-            a{color:#1a0dab!important;text-decoration:none;}
+            h1,h2,h3,h4,h5,h6,p,b,i{color:black!important;font-family: 'Poppins', sans-serif !important;}
+            .css-ip91b3{width:22rem !important;}
+            .css-pday0i{width:24rem;background:white !important;}
+            a{color:#1a0dab!important;text-decoration:none !important;}
             .css-hi6a2p {flex: 1 1 0%;width: 100%;padding: 2.5rem 1rem 6rem;max-width: 730px;margin: 53px;border-radius: 5px;}
             hr {margin: 1em 3px;padding: 0px;color: inherit;background-color: transparent;border-top: none;border-right: none;border-left: none;border-image: initial;border-bottom: 21px solid #f0f5f7!important;margin: 12px -32px;border-radius: 5px;}
 </style>
@@ -103,7 +103,7 @@ changer = st.checkbox("Change Theme")
 if changer == True:
     st.markdown("""
             <style>
-            .st-df{padding:10px;}
+            .st-df{padding:10px !important;}
             .st-cn{margin:-396px 791px 0px -15px;padding:20px;border-radius:5px;background-color:#ee7274 !important;font-size:1.2em;font-family: 'Poppins', sans-serif;}
             .css-1djdyxw{color:white !important}
             .css-hi6a2p{background-color:#242731 !important}
@@ -114,26 +114,26 @@ if changer == True:
             .css-n19jqu:hover{background:#ee7274 !important; color:white !important}
             .st-br{border:1px solid grey;border-bottom-color:grey;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;padding:9px !important}
             .st-bc{padding:9px !important;background:transparent}
-            .st-go{background: rgb(203, 199, 199);}
-            .st-bs{background:rgb(203, 199, 199);}
-            .st-bx{background:rgb(203, 199, 199);}
-            .st-bu{background:rgb(203, 199, 199);}
-            .st-cz{background:rgb(203, 199, 199);}
+            .st-go{background: rgb(203, 199, 199) !important;}
+            .st-bs{background:rgb(203, 199, 199) !important;}
+            .st-bx{background:rgb(203, 199, 199) !important;}
+            .st-bu{background:rgb(203, 199, 199) !important;}
+            .st-cz{background:rgb(203, 199, 199) !important;}
             .st-cl{padding: 9px !important;}
-            .css-1h8rjc8{background:#1E2028;}
-            .stButton{margin:-8px;}
-            .css-1ko0gb7{margin:0px 0px 1rem;}
+            .css-1h8rjc8{background:#1E2028 !important;}
+            .stButton{margin:-8px !important;}
+            .css-1ko0gb7{margin:0px 0px 1rem !important;}
             .css-hi6a2p{max-width:1000px !important ;background:white;padding: 2.5rem 1.5rem 6rem !important;}
-            .css-ip91b3{width:22rem;}
+            .css-ip91b3{width:22rem !important;}
             .css-pday0i{width:24rem;background:#242731!important;}
             .css-2lw3zc{color:white !important;}
             #heading{font-size:6.5rem !important;}
             .css-12jmujn{color:white !important}
-            h1,h2,h3,h4,h5,h6,p,b,i{color:white !important;font-family: 'Poppins', arial, sans-serif;}
+            h1,h2,h3,h4,h5,h6,p,b,i{color:white !important;font-family: 'Poppins', arial, sans-serif !important;}
             .css-hi6a2p {flex: 1 1 0%;width: 100%;padding: 2.5rem 1rem 6rem;max-width: 730px;margin: 53px;border-radius: 5px;}
             hr {margin: 1em 3px;padding: 0px;color: inherit;background-color: #1E2028 !important;border-top: none;border-right: none;border-left: none;border-image: initial;border-bottom: 21px solid #1F2128!important;margin: 12px -32px;border-radius: 5px;}
             .css-158txa1{color:white !important}
-            html{scrollbar-color: revert;}
+            html{scrollbar-color: revert !important;}
             a{color:#6da7ff!important;text-decoration:none;}
             /* scroll bar */
             ::-webkit-scrollbar {
@@ -158,16 +158,16 @@ elif changer == False:
             .st-br{border:1px solid grey;border-bottom-color:grey;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;padding:8px !important}
             .st-bc{padding:9px !important;background:transparent}
             .st-go{background: transparent;}
-            .st-bs{background:transparent}
-            .st-bx{background:transparent}
-            .st-bu{background:transparent}
-            .st-cz{background:transparent}
+            .st-bs{background:transparent !important;}
+            .st-bx{background:transparent !important;}
+            .st-bu{background:transparent !important;}
+            .st-cz{background:transparent !important;}
             .st-cl{padding: 9px !important;}
             #heading{font-size:7rem !important;}
-            .stButton{margin:-8px;}
-            .css-1ko0gb7{margin:0px 0px 1rem;}
+            .stButton{margin:-8px !important;}
+            .css-1ko0gb7{margin:0px 0px 1rem !important;}
             .css-hi6a2p{max-width:1000px !important ;background:white;padding: 2.5rem 1.5rem 6rem !important;}
-            h1,h2,h3,h4,h5,h6,p,b,i{color:black!important;font-family: 'Poppins', sans-serif;}
+            h1,h2,h3,h4,h5,h6,p,b,i{color:black!important;font-family: 'Poppins', sans-serif !important;}
             .css-ip91b3{width:22rem;}
             .css-pday0i{width:24rem;background:white;}
             a{color:#1a0dab!important;text-decoration:none;}
