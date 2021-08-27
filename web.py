@@ -147,8 +147,8 @@ button = """
                 .css-1ubkpyc{margin:21px -1px;padding: 18px 35px 14px 35px;}
                 .css-lybem{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
                 .css-qbe2hs{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;}
-                .css-n19jqu:hover{background:#ee7274 !important; color:white !important;}
-                .css-n19jqu{margin:34px 41.5%;padding:19px 58px !important;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;background:#ee7274 !important;color:black;}
+                .css-n19jqu:hover{background:#ee7274 !important; color:black !important;}
+                .css-n19jqu{margin:34px 41.5%;padding:19px 58px !important;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;background:#ee7274 !important;color:white;}
                 .st-br{border:1px solid grey;border-bottom-color:grey;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;padding:8px !important}
                 .st-bc{padding:9px !important;background:transparent}
                 .st-go{background: transparent !important;}
