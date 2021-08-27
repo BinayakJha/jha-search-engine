@@ -189,17 +189,17 @@ button = """
                 top: 34px;
                 # margin: 7vh 0vw 0 4vw;
                 }
-                .css-1sry6mp , .css-16xd7h, .css-47n5yn,.css-18pr10j,.css-nn3r2c,.css-18kfq8s,.css-11i2q6c,.css-11tp6y0,.css-pbvyo7,.css-r2fnjw,.css-oy2m8b,.css-11wmr1h,.css-yyyoaw,.css-jb9642,.css-nwse0c,.css-a72296,.css-1rzvowm,.css-upbzir,.css-3xxbtp,.css-1k7n4nm,.css-1ttvahg,.css-1acsqd8,.css-zcv45d,.css-1sry6mp,.css-o4v7a2{
-                    width: 584px;
-                    height: 46px;
-                    left: 508px;
-                    top: 534px;
-                    background: #FFFFFF;
-                    border: 1px solid #DFE1E5;
-                    box-sizing: border-box;
-                    border-radius: 8px;
-                    margin: 7vh 0vw 0 4vw;
-                }
+                # .css-1sry6mp , .css-16xd7h, .css-47n5yn,.css-18pr10j,.css-nn3r2c,.css-18kfq8s,.css-11i2q6c,.css-11tp6y0,.css-pbvyo7,.css-r2fnjw,.css-oy2m8b,.css-11wmr1h,.css-yyyoaw,.css-jb9642,.css-nwse0c,.css-a72296,.css-1rzvowm,.css-upbzir,.css-3xxbtp,.css-1k7n4nm,.css-1ttvahg,.css-1acsqd8,.css-zcv45d,.css-1sry6mp,.css-o4v7a2{
+                #     width: 584px;
+                #     height: 46px;
+                #     left: 508px;
+                #     top: 534px;
+                #     background: #FFFFFF;
+                #     border: 1px solid #DFE1E5;
+                #     box-sizing: border-box;
+                #     border-radius: 8px;
+                #     margin: 7vh 0vw 0 4vw;
+                # }
                 .css-1bi8zkq{
                     width: 518px;
                     margin: 7vh 0vw 0 4vw !important;
@@ -213,6 +213,7 @@ button = """
                 overflow-x:hidden;
                 overflow-y:hidden;
                 }
+            
     </style>
     """
 st.markdown(button, unsafe_allow_html=True)
@@ -384,6 +385,11 @@ if query:
     left:114px;
 }
      .css-hlxwf4{margin:-59px 0 !important !important;}
+    @media screen and (max-width: 1000px) {
+        .css-n19jqu{
+            margin:-97px 82.5%;
+        }
+    }
      </style>""", unsafe_allow_html=True)
    
     placeholder.empty()
