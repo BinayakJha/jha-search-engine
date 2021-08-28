@@ -312,6 +312,72 @@ button = """
                     font-size:48px;
                     color:#ffffff;
                 } 
+                @media screen and (min-width: 1920px ) {
+                    .images1 {
+                    position: absolute;
+                    width: 187px;
+                    height: 187px;
+                    left: 1181px;
+                    top: -219px;
+                    background: url(https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg), #C4C4C4;
+                    border: 7px solid #FFFFFF;
+                    border-radius: 8px;
+                }
+                .images2 {
+                width: 241px;
+                height: 241px;
+                left: 1359px;
+                top: 67px;
+                margin: -134px 67.5vw;
+                background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
+                border: 7px solid #FFFFFF;
+                border-radius: 8px;
+            }
+            .images3 {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
+            border: 9px solid #FFFFFF;
+            border-radius: 8px;
+            margin: 98px 78.5vw 0 72.5vw;
+        }
+        .bottom_images1 {
+        position: absolute;
+        width: 123px;
+        height: 123px;
+        left: -166px;
+        top: 879px;
+        background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg), #C4C4C4;
+        border: 9px solid #FFFFFF;
+        border-radius: 8px;
+        margin: -216px -222px;
+        z-index: 1;
+        }
+        .bottom_images2 {
+        position: absolute;
+        width: 347px;
+        height: 347px;
+        left: -181px;
+        top: 947px;
+        background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg), #C4C4C4;
+        border-radius: 8px;
+        margin: -200px -320px;
+        }
+        .bottom_images3 {
+        position: absolute;
+        width: 79px;
+        height: 79px;
+        left: -163px;
+        top: 1063px;
+        background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg), #C4C4C4;
+        border: 9px solid #FFFFFF;
+        border-radius: 8px;
+        margin: -190px -20px;
+        }
+        #heading{
+         margin-top:183px !important;
+         }
                 @media screen and (min-width: 2000px) {
                     .stCheckbox label {
                         left: 1129px;
@@ -659,6 +725,11 @@ if query:
     width:100px;
     position:absolute;
     visibility:hidden;
+}
+@media screen and (min-width: 2000px) {
+    .css-n19jqu {
+    margin: -46px 74.5% !important;
+    } 
 }
      .css-hlxwf4{margin:-59px 0 !important !important;}
     @media screen and (max-width: 1000px) {
