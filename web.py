@@ -379,7 +379,8 @@ button = """
         margin: -190px -20px;
         }
         #heading{
-         margin-top:183px !important;
+         margin-top:142px !important;
+         }
          }
                 @media screen and (min-width: 2000px) {
                     .stCheckbox label {
