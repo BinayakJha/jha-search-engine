@@ -219,7 +219,7 @@ query = st.text_input("",)
 button = """
     <style>
                 .st-df{padding:10px;}
-                .st-cn{margin:90px 40%;padding:20px;border-radius:5px;background-color:#ee7274 !important;font-size:1.2em;font-family: 'Poppins', sans-serif;}
+                .st-cn{padding:20px;border-radius:5px;background-color:#ee7274 !important;font-size:1.2em;font-family: 'Poppins', sans-serif;}
                 .stCheckbox span{visibility:hidden;}
                 # .css-hi6a2p{background-color:white !important}
                 .css-1ubkpyc{margin:21px -1px;padding: 18px 35px 14px 35px;}
