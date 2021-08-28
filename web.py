@@ -120,6 +120,81 @@ border-radius: 8px;
     border-radius: 8px;
     margin:-190px -20px;
 }
+@media screen and (min-width:1580px) {
+    .images1 {
+    position: absolute;
+    width: 187px;
+    height: 187px;
+    left: 1022px;
+    top: -219px;
+    background: url(https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg), #C4C4C4;
+    border: 7px solid #FFFFFF;
+    border-radius: 8px;
+    }
+}   
+@media screen and (min-width:2000px) {
+    .images1 {
+    position: absolute;
+    width: 187px;
+    height: 187px;
+    left: 1283px;
+    top: -219px;
+    background: url(https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg), #C4C4C4;
+    border: 7px solid #FFFFFF;
+    border-radius: 8px;
+}
+    .images3 {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
+        border: 9px solid #FFFFFF;
+        border-radius: 8px;
+        margin: 99px 77.5vw 0px 70.5vw;
+    }
+    .images2 {
+    width: 241px;
+    height: 241px;
+    left: 1356px;
+    top: 67px;
+    margin: -134px 64.5vw;
+    background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
+    border: 7px solid #FFFFFF;
+    border-radius: 8px;
+}
+    .bottom_images1 {
+        position: absolute;
+        width: 123px;
+        height: 123px;
+        left: -276px;
+        top: 945px;
+        background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg), #C4C4C4;
+        border: 9px solid #FFFFFF;
+        border-radius: 8px;
+        margin: -216px -222px;
+        z-index: 1;
+    }
+    .bottom_images2 {
+        position: absolute;
+        width: 347px;
+        left: -321px;
+        top: 1002px;
+        background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg), #C4C4C4;
+        border-radius: 8px;
+        margin: -200px -320px;
+    }
+    .bottom_images3 {
+        position: absolute;
+        width: 79px;
+        height: 79px;
+        left: -308px;
+        top: 1072px;
+        background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg), #C4C4C4;
+        border: 9px solid #FFFFFF;
+        border-radius: 8px;
+        margin: -190px -20px;
+    }
+}
 </style>""", unsafe_allow_html=True)
 
 # <p style='text-align:center;font-size:1.3em;'>Fast, Secure, Full privacy control to the user, Non tracking Browser</p><p  style='text-align:center;margin-bottom:-2px;font-size:1.1em;'>Search Here!!</p>
@@ -237,6 +312,21 @@ button = """
                     font-size:48px;
                     color:#ffffff;
                 } 
+                @media screen and (min-width: 2000px) {
+                    .stCheckbox label {
+                        left: 1129px;
+                        top: 176px;
+                    }
+                    .css-n19jqu {
+                        margin: 65px 41.5% !important; 
+                    }
+                    .css-feqc82{
+                        top:51px !important;
+                    }
+                    #heading{
+                    margin-top:145px !important;
+                    }
+                }
             
     </style>
     """
