@@ -12,6 +12,9 @@ import people_also_ask
 
 st.set_page_config(page_title="Jha Browser")
 st.markdown("""
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
@@ -224,7 +227,7 @@ button = """
                 .css-qbe2hs{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;}
                 .css-n19jqu:hover{background:#ee7274 !important; color:black !important;}
                 .css-n19jqu{margin:34px 41.5%;padding:19px 58px !important;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;background:#ee7274 !important;color:white;}
-                .st-br{border:1px solid grey;border-bottom-color:grey;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;padding:8px !important}
+                .st-br{border:1px solid grey;border-bottom-color:grey;padding:8px !important}
                 .st-bc{padding:9px !important;background:transparent}
                 .st-go{background: transparent !important;}
                 .st-bs{background:transparent !important;}
@@ -419,7 +422,7 @@ if changer == True:
                 .css-qbe2hs{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;}
                 .css-n19jqu:hover{background:#ee7274 !important; color:white !important;}
                 .css-n19jqu{margin:34px 41.5%;padding:19px 58px !important;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;background:#ee7274 !important;color:black;}
-                .st-br{box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;padding:8px !important;border: 1px solid #25282E;}
+                .st-br{padding:8px !important;border: 1px solid #25282E;}
                 .st-bc{padding:9px !important;background:#0D0D0D;color:white;}
                 .st-go{background: #0D0D0D !important;color:white;}
                 .st-bs{background:#0D0D0D !important;color:white;}
@@ -552,7 +555,7 @@ elif changer == False:
                 .css-qbe2hs{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;}
                 .css-n19jqu:hover{background:#ee7274 !important; color:black !important;}
                 .css-n19jqu{margin:34px 41.5%;padding:19px 58px !important;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;background:#ee7274 !important;color:white;}
-                .st-br{border:1px solid grey;border-bottom-color:grey;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;padding:8px !important}
+                .st-br{padding:8px !important}
                 .st-bc{padding:9px !important;background:transparent}
                 .st-go{background: transparent !important;}
                 .st-bs{background:transparent !important;}
@@ -561,7 +564,7 @@ elif changer == False:
                 .st-cz{background:transparent !important;}
                 .st-cl{padding: 9px !important;}
                 .st-bg{padding: 9px !important;}
-                .st-bv{background:transparent !important;}
+                .st-bv{background:transparent !important;border:none !important;}
                 # #heading{font-family: Poppins;font-style: normal;font-weight: 600;font-size: 96px;line-height: 144px;letter-spacing: -0.02em;letter-spacing: -0.02em !important;color: #000000;position: relative;height: 100%;width: 100%;bottom: 9px;top:12vh; }
                 #heading{
                         # width: 500px;
