@@ -222,6 +222,12 @@ button = """
                     border-radius: 10px;
                     border: 1px solid #151515;
                 }
+                @media screen and (min-width: 1290px) {
+                    .stCheckbox label {
+                        left: 993px;
+                        top: 45px;
+                    }
+                }
                 .st-bu{background:transparent !important;}
                 .stCheckbox span {
                     position: absolute;
@@ -244,6 +250,7 @@ if changer == True:
                      margin:19px 14px !important;
                     font-size:48px;
                     color:#ffffff;
+                    transform:scale3d(1.5,1.5,1.5);
             }
              .stCheckbox label {
                   border: 1px solid #151515;
@@ -377,6 +384,7 @@ elif changer == False:
                      margin:19px 14px !important;
                     font-size:48px;
                     color:black;
+                    transform:scale3d(1.5,1.5,1.5);
                 }
                 .stCheckbox label{
                     border:1px solid #EEF6FF;
@@ -607,8 +615,6 @@ if query:
                     st.markdown(featured_answer, unsafe_allow_html=True)
                 if featured_answer == "":
                     try:
-                        st.markdown('<h3>Definition</h3>',
-                                    unsafe_allow_html=True)
                         # replace meaning of or defination of with space
                         if "meaning of" in query:
                             query = query.replace("meaning of", "")
