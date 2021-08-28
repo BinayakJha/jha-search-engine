@@ -320,7 +320,7 @@ button = """
                     position: absolute;
                     width: 187px;
                     height: 187px;
-                    left: 1181px;
+                    left: 1210px;
                     top: -219px;
                     background: url(https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg), #C4C4C4;
                     border: 7px solid #FFFFFF;
@@ -349,8 +349,8 @@ button = """
         position: absolute;
         width: 123px;
         height: 123px;
-        left: -166px;
-        top: 879px;
+        left: -179px;
+        top: 761px;
         background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg), #C4C4C4;
         border: 9px solid #FFFFFF;
         border-radius: 8px;
@@ -361,8 +361,8 @@ button = """
         position: absolute;
         width: 347px;
         height: 347px;
-        left: -181px;
-        top: 947px;
+        left: -207px;
+        top: 822px;
         background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg), #C4C4C4;
         border-radius: 8px;
         margin: -200px -320px;
@@ -371,8 +371,8 @@ button = """
         position: absolute;
         width: 79px;
         height: 79px;
-        left: -163px;
-        top: 1063px;
+        left: -188px;
+        top: 937px;
         background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg), #C4C4C4;
         border: 9px solid #FFFFFF;
         border-radius: 8px;
