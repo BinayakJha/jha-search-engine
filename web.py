@@ -198,6 +198,7 @@ border-radius: 8px;
         margin: -190px -20px;
     }
 }
+
 </style>""", unsafe_allow_html=True)
 
 # <p style='text-align:center;font-size:1.3em;'>Fast, Secure, Full privacy control to the user, Non tracking Browser</p><p  style='text-align:center;margin-bottom:-2px;font-size:1.1em;'>Search Here!!</p>
@@ -300,6 +301,8 @@ button = """
                     border-radius: 10px;
                     border: 1px solid #151515;
                 }
+                 # mobile responsive
+       
                 @media screen and (min-width: 1290px) {
                     .stCheckbox label {
                         left: 993px;
@@ -397,7 +400,44 @@ button = """
                     margin-top:145px !important;
                     }
                 }
-            
+        @media screen and (max-width: 530px){
+        .css-n19jqu {
+            margin:34px 31.5% !important;
+        }
+        }
+        @media screen and (max-width: 767px) {
+            #heading{
+                margin-top:62px !important;
+                font-size:61px !important;
+            }
+            .css-n19jqu {
+                margin: 34px 36.5% !important;
+                padding: 19px 58px !important;
+                border: 1px solid red;
+                box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;
+                background: #ee7274 !important;
+                color: white;
+            }
+            .images2 {
+                width: 232px;
+                height: 241px;
+                left: 1359px;
+                top: 67px;
+                margin: -242px 67.5vw;
+                background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
+                border: 7px solid #FFFFFF;
+                border-radius: 8px;
+            }
+            .images3 {
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
+                border: 9px solid #FFFFFF;
+                border-radius: 8px;
+                margin: 125px 75.5vw 0 60.5vw;
+            }
+        }
     </style>
     """
 st.markdown(button, unsafe_allow_html=True)
