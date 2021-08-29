@@ -445,7 +445,7 @@ hr {
 }
 @media screen and (max-width: 313px) {
     .css-n19jqu {
-    margin: 16px 11.5% !important;
+    margin: 16px 6.5% !important;
     }
     .st-bg {
     padding: 6px !important;
