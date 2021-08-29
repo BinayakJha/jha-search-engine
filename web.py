@@ -504,7 +504,7 @@ hr {
         margin: 125px 75.5vw 0 60.5vw;
     }
 }  
-@media screen and (min-width: 435px) {
+@media screen and (min-width: 435px) and (max-width: 500px) { 
     #heading{
         margin-top: -19px !important;
         font-size: 61px !important
