@@ -12,9 +12,9 @@ import people_also_ask
 
 st.set_page_config(page_title="Jha Browser")
 st.markdown("""
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="HandheldFriendly" content="true">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
@@ -443,7 +443,133 @@ hr {
     color: #ffffff;
     font-family:system-ui;
 }
+@media screen and (max-width: 313px) {
+    .css-n19jqu {
+    margin: 16px 11.5% !important;
+    }
+    .st-bg {
+    padding: 6px !important;
+    }
+    #heading {
+        margin-top: -19px !important;
+        font-size: 36px !important;
+    }
+    .images2 {
+        width: 232px;
+        height: 241px;
+        left: 1359px;
+        top: 67px;
+        margin: -242px 67.5vw;
+        background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
+        border: 7px solid #FFFFFF;
+        border-radius: 8px;
+    }
 
+    .images3 {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
+        border: 9px solid #FFFFFF;
+        border-radius: 8px;
+        margin: 125px 75.5vw 0 60.5vw;
+    }
+}
+@media screen and (min-width:314px) and (max-width: 405px) {
+    #heading{
+        margin-top: -19px !important;
+        font-size: 45px !important
+    }
+    .css-n19jqu {
+    margin: 16px 18.5% !important;
+    }
+     .images2 {
+        width: 232px;
+        height: 241px;
+        left: 1359px;
+        top: 67px;
+        margin: -242px 67.5vw;
+        background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
+        border: 7px solid #FFFFFF;
+        border-radius: 8px;
+    }
+
+    .images3 {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
+        border: 9px solid #FFFFFF;
+        border-radius: 8px;
+        margin: 125px 75.5vw 0 60.5vw;
+    }
+}  
+@media screen and (min-width: 435px) {
+    #heading{
+        margin-top: -19px !important;
+        font-size: 61px !important
+    }
+}
+  
+@media screen and (min-width: 406px) and (max-width: 531px) {
+    #heading{
+        margin-top: -19px !important;
+        font-size: 55px !important
+}
+@media screen and (max-width: 530px) {
+    .css-n19jqu {
+        margin: 15px 30.5% !important
+    }
+}
+
+@media screen and (min-width: 767px) {
+    #heading {
+        margin-top: -19px !important;
+        font-size: 66px !important;
+    }
+    .stButton{
+        margin:-35px 6px !important;
+    }
+}
+
+    .css-n19jqu {
+        margin: 34px 36.5% !important;
+        padding: 19px 58px !important;
+        border: 1px solid red;
+        box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;
+        background: #ee7274 !important;
+        color: white;
+    }
+
+    .images2 {
+        width: 232px;
+        height: 241px;
+        left: 1359px;
+        top: 67px;
+        margin: -242px 67.5vw;
+        background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
+        border: 7px solid #FFFFFF;
+        border-radius: 8px;
+    }
+
+    .images3 {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
+        border: 9px solid #FFFFFF;
+        border-radius: 8px;
+        margin: 125px 75.5vw 0 60.5vw;
+    }
+}
+@media screen and (min-width:765px)and (max-width: 1150px) {
+    .images1 {
+        left: 960px;
+        top: -251px;
+    }
+    .images2 {
+        margin: -224px 75.5vw;
+}
 @media screen and (min-width: 1920px) {
     .images1 {
         position: absolute;
@@ -537,48 +663,7 @@ hr {
     }
 }
 
-@media screen and (max-width: 530px) {
-    .css-n19jqu {
-        margin: 34px 31.5% !important;
-    }
-}
 
-@media screen and (max-width: 767px) {
-    #heading {
-        margin-top: 62px !important;
-        font-size: 61px !important;
-    }
-
-    .css-n19jqu {
-        margin: 34px 36.5% !important;
-        padding: 19px 58px !important;
-        border: 1px solid red;
-        box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;
-        background: #ee7274 !important;
-        color: white;
-    }
-
-    .images2 {
-        width: 232px;
-        height: 241px;
-        left: 1359px;
-        top: 67px;
-        margin: -242px 67.5vw;
-        background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
-        border: 7px solid #FFFFFF;
-        border-radius: 8px;
-    }
-
-    .images3 {
-        position: absolute;
-        width: 70px;
-        height: 70px;
-        background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
-        border: 9px solid #FFFFFF;
-        border-radius: 8px;
-        margin: 125px 75.5vw 0 60.5vw;
-    }
-}
     </style>
     """
 st.markdown(button, unsafe_allow_html=True)
@@ -682,6 +767,7 @@ if changer == True:
 
 .st-bv {
     background: #0D0D0D !important;
+    border:none;
 }
 
 #heading {
