@@ -441,6 +441,7 @@ hr {
     margin: 19px 14px !important;
     font-size: 48px;
     color: #ffffff;
+    font-family:system-ui;
 }
 
 @media screen and (min-width: 1920px) {
