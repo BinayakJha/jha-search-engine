@@ -62,14 +62,14 @@ st.markdown("""
 </div>
 <style>
 .images1{
-position: absolute;
-width: 187px;
-height: 187px;
-left: 927px;
-top: -219px;
-background: url('https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg'), #C4C4C4;
-border: 7px solid #FFFFFF;
-border-radius: 8px;
+    position: absolute;
+    width: 187px;
+    height: 187px;
+    left: 927px;
+    top: -219px;
+    background: url('https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg'), #C4C4C4;
+    border: 7px solid #FFFFFF;
+    border-radius: 8px;
 }
 .images2{
     width: 241px;
@@ -155,7 +155,7 @@ border-radius: 8px;
         border-radius: 8px;
         margin: 99px 77.5vw 0px 70.5vw;
     }
-    .images2 {
+ .images2 {
     width: 241px;
     height: 241px;
     left: 1356px;
@@ -165,7 +165,7 @@ border-radius: 8px;
     border: 7px solid #FFFFFF;
     border-radius: 8px;
 }
-    .bottom_images1 {
+.bottom_images1 {
         position: absolute;
         width: 123px;
         height: 123px;
@@ -177,7 +177,7 @@ border-radius: 8px;
         margin: -216px -222px;
         z-index: 1;
     }
-    .bottom_images2 {
+.bottom_images2 {
         position: absolute;
         width: 347px;
         left: -321px;
@@ -186,7 +186,7 @@ border-radius: 8px;
         border-radius: 8px;
         margin: -200px -320px;
     }
-    .bottom_images3 {
+.bottom_images3 {
         position: absolute;
         width: 79px;
         height: 79px;
@@ -219,136 +219,264 @@ def get_source(url):
 query = st.text_input("",)
 button = """
     <style>
-                .st-df{padding:10px;}
-                .st-cn{padding:20px;border-radius:5px;background-color:#ee7274 !important;font-size:1.2em;font-family: 'Poppins', sans-serif;}
-                .stCheckbox span{visibility:hidden;}
-                # .css-hi6a2p{background-color:white !important}
-                .css-1ubkpyc{margin:21px -1px;padding: 18px 35px 14px 35px;}
-                .css-lybem{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
-                .css-qbe2hs{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;}
-                .css-n19jqu:hover{background:#ee7274 !important; color:black !important;}
-                .css-n19jqu{margin:34px 41.5%;padding:19px 58px !important;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;background:#ee7274 !important;color:white;}
-                .st-br{border:1px solid grey;border-bottom-color:grey;padding:8px !important}
-                .st-bc{padding:9px !important;background:transparent}
-                .st-go{background: transparent !important;}
-                .st-bs{background:transparent !important;}
-                .st-bx{background:transparent !important;}
-                .st-bu{background:transparent !important;}
-                .st-cz{background:transparent !important;}
-                .st-cl{padding: 9px !important;}
-                .st-bg{padding: 9px !important;}
-                .st-bv{background:transparent !important;}
-                # #heading{font-family: Poppins;font-style: normal;font-weight: 600;font-size: 96px;line-height: 144px;letter-spacing: -0.02em;letter-spacing: -0.02em !important;color: #000000;position: relative;height: 100%;width: 100%;bottom: 9px;top:12vh; }
-                #heading{
-                        # width: 500px;
-                        height: 144px;
-                        left: 550px;
-                        top: 386px;
-                        font-family: Poppins;
-                        font-style: normal;
-                        font-weight: 600;
-                        font-size: 96px;
-                        line-height: 185px;
-                        letter-spacing: -0.02em;
-                }
-                .stButton{margin:0px!important;}
-                .css-1ko0gb7{margin:0px 0px 1rem !important;}
-                .css-hi6a2p{max-width:1000px !important ;padding: 2.5rem 1.5rem 6rem !important;}
-                h1,h2,h3,h4,h5,h6,p,b,i{color:black!important;font-family: 'Poppins', sans-serif !important;}
-                .css-ip91b3{width:22rem !important;}
-                .css-pday0i{width:24rem;background:white !important;}
-                a{color:#1a0dab!important;text-decoration:none !important;}
-                .css-hi6a2p {flex: 1 1 0%;width: 100%;padding: 2.5rem 1rem 6rem;max-width: 730px;margin: 53px;border-radius: 5px;}
-                hr {margin: 1em 3px;padding: 0px;color: inherit;background-color: transparent;border-top: none;border-right: none;border-left: none;border-image: initial;border-bottom: 21px solid #f0f5f7!important;margin: 12px -32px;border-radius: 5px;}
-                .css-feqc82 {
-                position: relative;
-                width: 584px;
-                justify-content: center;
-                left: 188px;
-                top: 34px;
-                # margin: 7vh 0vw 0 4vw;
-                }
-                # .css-1sry6mp , .css-16xd7h, .css-47n5yn,.css-18pr10j,.css-nn3r2c,.css-18kfq8s,.css-11i2q6c,.css-11tp6y0,.css-pbvyo7,.css-r2fnjw,.css-oy2m8b,.css-11wmr1h,.css-yyyoaw,.css-jb9642,.css-nwse0c,.css-a72296,.css-1rzvowm,.css-upbzir,.css-3xxbtp,.css-1k7n4nm,.css-1ttvahg,.css-1acsqd8,.css-zcv45d,.css-1sry6mp,.css-o4v7a2{
-                #     width: 584px;
-                #     height: 46px;
-                #     left: 508px;
-                #     top: 534px;
-                #     background: #FFFFFF;
-                #     border: 1px solid #DFE1E5;
-                #     box-sizing: border-box;
-                #     border-radius: 8px;
-                #     margin: 7vh 0vw 0 4vw;
-                # }
-                .css-1bi8zkq{
-                    width: 518px;
-                    margin: 7vh 0vw 0 4vw !important;
-                }
-                @media screen and (max-width: 530px) {
-                    .css-n19jqu{
-                        margin:0 37.5% !important;
-                    }
-                }
-            .css-1v3fvcr{
-                overflow-x:hidden;
-                overflow-y:hidden;
-                }
-                .stCheckbox label {
-                    position: absolute;
-                    width: 69px;
-                    height: 69px;
-                    left: 1001px;
-                    top: 105px;
-                    border-radius: 10px;
-                    border: 1px solid #151515;
-                }
-                 # mobile responsive
-       
-                @media screen and (min-width: 1290px) {
-                    .stCheckbox label {
-                        left: 993px;
-                        top: 45px;
-                    }
-                }
-                .st-bu{background:transparent !important;}
-                .stCheckbox span {
-                    position: absolute;
-                }
-                .css-1djdyxw{
-                    margin:19px 14px !important;
-                    font-size:48px;
-                    color:#ffffff;
-                } 
-                @media screen and (min-width: 1920px ) {
-                    .images1 {
-                    position: absolute;
-                    width: 187px;
-                    height: 187px;
-                    left: 1210px;
-                    top: -219px;
-                    background: url(https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg), #C4C4C4;
-                    border: 7px solid #FFFFFF;
-                    border-radius: 8px;
-                }
-                .images2 {
-                width: 241px;
-                height: 241px;
-                left: 1359px;
-                top: 67px;
-                margin: -134px 67.5vw;
-                background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
-                border: 7px solid #FFFFFF;
-                border-radius: 8px;
-            }
-            .images3 {
-            position: absolute;
-            width: 70px;
-            height: 70px;
-            background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
-            border: 9px solid #FFFFFF;
-            border-radius: 8px;
-            margin: 98px 78.5vw 0 72.5vw;
-        }
-        .bottom_images1 {
+.st-df {
+    padding: 10px;
+}
+
+.st-cn {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #ee7274 !important;
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.stCheckbox span {
+    visibility: hidden;
+}
+
+
+.css-1ubkpyc {
+    margin: 21px -1px;
+    padding: 18px 35px 14px 35px;
+}
+
+.css-lybem {
+    margin: 21px -1px;
+    padding: 18px 35px 14px 35px;
+    border: 1px solid red;
+    box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;
+}
+
+.css-qbe2hs {
+    margin: 21px -1px;
+    padding: 18px 35px 14px 35px;
+    border: 1px solid red;
+}
+
+.css-n19jqu:hover {
+    background: #ee7274 !important;
+    color: black !important;
+}
+
+.css-n19jqu {
+    margin: 34px 41.5%;
+    padding: 19px 58px !important;
+    border: 1px solid red;
+    box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;
+    background: #ee7274 !important;
+    color: white;
+}
+
+.st-br {
+    border: 1px solid grey;
+    border-bottom-color: grey;
+    padding: 8px !important
+}
+
+.st-bc {
+    padding: 9px !important;
+    background: transparent
+}
+
+.st-go {
+    background: transparent !important;
+}
+
+.st-bs {
+    background: transparent !important;
+}
+
+.st-bx {
+    background: transparent !important;
+}
+
+.st-bu {
+    background: transparent !important;
+}
+
+.st-cz {
+    background: transparent !important;
+}
+
+.st-cl {
+    padding: 9px !important;
+}
+
+.st-bg {
+    padding: 9px !important;
+}
+
+.st-bv {
+    background: transparent !important;
+}
+
+
+#heading {
+    height: 144px;
+    left: 550px;
+    top: 386px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 185px;
+    letter-spacing: -0.02em;
+}
+
+.stButton {
+    margin: 0px !important;
+}
+
+.css-1ko0gb7 {
+    margin: 0px 0px 1rem !important;
+}
+
+.css-hi6a2p {
+    max-width: 1000px !important;
+    padding: 2.5rem 1.5rem 6rem !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+b,
+i {
+    color: black !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.css-ip91b3 {
+    width: 22rem !important;
+}
+
+.css-pday0i {
+    width: 24rem;
+    background: white !important;
+}
+
+a {
+    color: #1a0dab !important;
+    text-decoration: none !important;
+}
+
+.css-hi6a2p {
+    flex: 1 1 0%;
+    width: 100%;
+    padding: 2.5rem 1rem 6rem;
+    max-width: 730px;
+    margin: 53px;
+    border-radius: 5px;
+}
+
+hr {
+    margin: 1em 3px;
+    padding: 0px;
+    color: inherit;
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-image: initial;
+    border-bottom: 21px solid #f0f5f7 !important;
+    margin: 12px -32px;
+    border-radius: 5px;
+}
+
+.css-feqc82 {
+    position: relative;
+    width: 584px;
+    justify-content: center;
+    left: 188px;
+    top: 34px;
+}
+
+.css-1bi8zkq {
+    width: 518px;
+    margin: 7vh 0vw 0 4vw !important;
+}
+
+@media screen and (max-width: 530px) {
+    .css-n19jqu {
+        margin: 0 37.5% !important;
+    }
+}
+
+.css-1v3fvcr {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.stCheckbox label {
+    position: absolute;
+    width: 69px;
+    height: 69px;
+    left: 1001px;
+    top: 105px;
+    border-radius: 10px;
+    border: 1px solid #151515;
+}
+
+/* # mobile responsive  */
+@media screen and (min-width: 1290px) {
+    .stCheckbox label {
+        left: 993px;
+        top: 45px;
+    }
+}
+
+.st-bu {
+    background: transparent !important;
+}
+
+.stCheckbox span {
+    position: absolute;
+}
+
+.css-1djdyxw {
+    margin: 19px 14px !important;
+    font-size: 48px;
+    color: #ffffff;
+}
+
+@media screen and (min-width: 1920px) {
+    .images1 {
+        position: absolute;
+        width: 187px;
+        height: 187px;
+        left: 1210px;
+        top: -219px;
+        background: url(https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg), #C4C4C4;
+        border: 7px solid #FFFFFF;
+        border-radius: 8px;
+    }
+
+    .images2 {
+        width: 241px;
+        height: 241px;
+        left: 1359px;
+        top: 67px;
+        margin: -134px 67.5vw;
+        background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
+        border: 7px solid #FFFFFF;
+        border-radius: 8px;
+    }
+
+    .images3 {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
+        border: 9px solid #FFFFFF;
+        border-radius: 8px;
+        margin: 98px 78.5vw 0 72.5vw;
+    }
+
+    .bottom_images1 {
         position: absolute;
         width: 123px;
         height: 123px;
@@ -359,8 +487,9 @@ button = """
         border-radius: 8px;
         margin: -216px -222px;
         z-index: 1;
-        }
-        .bottom_images2 {
+    }
+
+    .bottom_images2 {
         position: absolute;
         width: 347px;
         height: 347px;
@@ -369,8 +498,9 @@ button = """
         background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg), #C4C4C4;
         border-radius: 8px;
         margin: -200px -320px;
-        }
-        .bottom_images3 {
+    }
+
+    .bottom_images3 {
         position: absolute;
         width: 79px;
         height: 79px;
@@ -380,64 +510,74 @@ button = """
         border: 9px solid #FFFFFF;
         border-radius: 8px;
         margin: -190px -20px;
-        }
-        #heading{
-         margin-top:142px !important;
-         }
-         }
-                @media screen and (min-width: 2000px) {
-                    .stCheckbox label {
-                        left: 1129px;
-                        top: 176px;
-                    }
-                    .css-n19jqu {
-                        margin: 65px 41.5% !important; 
-                    }
-                    .css-feqc82{
-                        top:51px !important;
-                    }
-                    #heading{
-                    margin-top:145px !important;
-                    }
-                }
-        @media screen and (max-width: 530px){
-        .css-n19jqu {
-            margin:34px 31.5% !important;
-        }
-        }
-        @media screen and (max-width: 767px) {
-            #heading{
-                margin-top:62px !important;
-                font-size:61px !important;
-            }
-            .css-n19jqu {
-                margin: 34px 36.5% !important;
-                padding: 19px 58px !important;
-                border: 1px solid red;
-                box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;
-                background: #ee7274 !important;
-                color: white;
-            }
-            .images2 {
-                width: 232px;
-                height: 241px;
-                left: 1359px;
-                top: 67px;
-                margin: -242px 67.5vw;
-                background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
-                border: 7px solid #FFFFFF;
-                border-radius: 8px;
-            }
-            .images3 {
-                position: absolute;
-                width: 70px;
-                height: 70px;
-                background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
-                border: 9px solid #FFFFFF;
-                border-radius: 8px;
-                margin: 125px 75.5vw 0 60.5vw;
-            }
-        }
+    }
+
+    #heading {
+        margin-top: 142px !important;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .stCheckbox label {
+        left: 1129px;
+        top: 176px;
+    }
+
+    .css-n19jqu {
+        margin: 65px 41.5% !important;
+    }
+
+    .css-feqc82 {
+        top: 51px !important;
+    }
+
+    #heading {
+        margin-top: 145px !important;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .css-n19jqu {
+        margin: 34px 31.5% !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #heading {
+        margin-top: 62px !important;
+        font-size: 61px !important;
+    }
+
+    .css-n19jqu {
+        margin: 34px 36.5% !important;
+        padding: 19px 58px !important;
+        border: 1px solid red;
+        box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;
+        background: #ee7274 !important;
+        color: white;
+    }
+
+    .images2 {
+        width: 232px;
+        height: 241px;
+        left: 1359px;
+        top: 67px;
+        margin: -242px 67.5vw;
+        background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
+        border: 7px solid #FFFFFF;
+        border-radius: 8px;
+    }
+
+    .images3 {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
+        border: 9px solid #FFFFFF;
+        border-radius: 8px;
+        margin: 125px 75.5vw 0 60.5vw;
+    }
+}
     </style>
     """
 st.markdown(button, unsafe_allow_html=True)
@@ -446,222 +586,472 @@ changer = st.checkbox("☾")
 if changer == True:
     st.markdown("""
             <style>
-            .css-1djdyxw {
-                     margin:19px 14px !important;
-                    font-size:48px;
-                    color:#ffffff;
-                    transform:scale3d(1.5,1.5,1.5);
-            }
-             .stCheckbox label {
-                  border: 1px solid #151515;
-                }
-                .css-1h8rjc8{background: #131313 !important;}
-                .st-df{padding:10px;}
-                .st-cn{padding:20px 0px;border-radius:5px;background-color:#ee7274 !important;font-size:1.2em;font-family: 'Poppins', sans-serif;}
-                .css-1ubkpyc{margin:21px -1px;padding: 18px 35px 14px 35px;}
-                .css-lybem{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
-                .css-qbe2hs{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;}
-                .css-n19jqu:hover{background:#ee7274 !important; color:white !important;}
-                .css-n19jqu{margin:34px 41.5%;padding:19px 58px !important;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;background:#ee7274 !important;color:black;}
-                .st-br{padding:8px !important;border: 1px solid #25282E;}
-                .st-bc{padding:9px !important;background:#0D0D0D;color:white;}
-                .st-go{background: #0D0D0D !important;color:white;}
-                .st-bs{background:#0D0D0D !important;color:white;}
-                .st-bx{background:#0D0D0D !important;color:white;}
-                # .st-cz{background:#0D0D0D !important;color:white;}
-                .st-cl{padding: 9px !important;}
-                .st-bg{padding: 9px !important;}
-                .st-bv{background:#0D0D0D !important;}
-                # #heading{font-family: Poppins;font-style: normal;font-weight: 600;font-size: 96px;line-height: 144px;letter-spacing: -0.02em;letter-spacing: -0.02em !important;color: #000000;position: relative;height: 100%;width: 100%;bottom: 9px;top:12vh; }
-                #heading{
-                        # width: 500px;
-                        height: 144px;
-                        left: 550px;
-                        top: 386px;
-                        font-family: Poppins;
-                        font-style: normal;
-                        font-weight: 600;
-                        font-size: 96px;
-                        line-height: 185px;
-                        letter-spacing: -0.02em;
-                }
-                .stButton{margin:0px!important;}
-                .css-1ko0gb7{margin:0px 0px 1rem !important;}
-                .css-hi6a2p{max-width:1000px !important ;padding: 2.5rem 1.5rem 6rem !important;}
-                h1,h2,h3,h4,h5,h6,p,b,i{color:#FFFFFF!important;font-family: 'Poppins', sans-serif !important;}
-                .css-ip91b3{width:22rem !important;}
-                .css-pday0i{width:24rem;background:black !important;}
-                a{color:#6da7ff!important;text-decoration:none;}
-                .css-hi6a2p {flex: 1 1 0%;width: 100%;padding: 2.5rem 1rem 6rem;max-width: 730px;margin: 53px;border-radius: 5px;}
-                hr {margin: 1em 3px;padding: 0px;color: inherit;background-color: transparent;border-top: none;border-right: none;border-left: none;border-image: initial;border-bottom: 21px solid #131313 !important;margin: 12px -32px;border-radius: 5px;}
-                .css-feqc82 {
-                position: relative;
-                width: 584px;
-                justify-content: center;
-                left: 188px;
-                top: 34px;
-                }
-                .css-1bi8zkq{
-                    width: 518px;
-                    margin: 7vh 0vw 0 4vw !important;
-                }
-                @media screen and (max-width: 530px) {
-                    .css-n19jqu{
-                        margin:0 37.5% !important;
-                    }
-                }
-            .css-1v3fvcr{
-                overflow-x:hidden;
-                overflow-y:hidden;
-                }
-                .images1{
-                    position: absolute;
-                    width: 187px;
-                    height: 187px;
-                    left: 927px;
-                    top: -219px;
-                    background: url('https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg'), #C4C4C4;
-                    border: 7px solid #131313;
-                    border-radius: 8px;
-                    }
-                .images2{
-                    width: 241px;
-                    height: 241px;
-                    left: 1359px;
-                    top: 67px;
-                    margin:-134px 67.5vw;
-                    background: url('https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg'), #C4C4C4;
-                    border: 7px solid #131313;
-                    border-radius: 8px; 
-                }
-        .images3{
-            position: absolute;
-            width: 70px;
-            height: 70px;
-            background: url('https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg'), #C4C4C4;
-            border: 9px solid #131313;
-            border-radius: 8px;
-            margin:98px 78.5vw 0 72.5vw;
-        }
-        .bottom_images1{
-            position: absolute;
-            width: 123px;
-            height: 123px;
-            left: -61px;
-            top: 706px;
-            background: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg'), #C4C4C4;
-            border: 9px solid #131313;
-            border-radius: 8px;
-            margin:-216px -222px;
-            z-index: 1;
-        }
-        .bottom_images2{
-            position: absolute;
-            width: 347px;
-            height: 347px;
-            left: -86px;
-            top: 768px;
-            background: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg'), #C4C4C4;
-            border-radius: 8px;
-            margin:-200px -320px;
-        }
-        .bottom_images3{
-            position: absolute;
-            width: 79px;
-            height: 79px;
-            left: -61px;
-            top: 830px;
-            background: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg'), #C4C4C4;
-            border: 9px solid #131313;
-            border-radius: 8px;
-            margin:-190px -20px;
-        }
-            </style>""", unsafe_allow_html=True)
+           .css-1djdyxw {
+    margin: 19px 14px !important;
+    font-size: 48px;
+    color: #ffffff;
+    transform: scale3d(1.5, 1.5, 1.5);
+}
+
+.stCheckbox label {
+    border: 1px solid #151515;
+}
+
+.css-1h8rjc8 {
+    background: #131313 !important;
+}
+
+.st-df {
+    padding: 10px;
+}
+
+.st-cn {
+    padding: 20px 0px;
+    border-radius: 5px;
+    background-color: #ee7274 !important;
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.css-1ubkpyc {
+    margin: 21px -1px;
+    padding: 18px 35px 14px 35px;
+}
+
+.css-lybem {
+    margin: 21px -1px;
+    padding: 18px 35px 14px 35px;
+    border: 1px solid red;
+    box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;
+}
+
+.css-qbe2hs {
+    margin: 21px -1px;
+    padding: 18px 35px 14px 35px;
+    border: 1px solid red;
+}
+
+.css-n19jqu:hover {
+    background: #ee7274 !important;
+    color: white !important;
+}
+
+.css-n19jqu {
+    margin: 34px 41.5%;
+    padding: 19px 58px !important;
+    border: 1px solid red;
+    box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;
+    background: #ee7274 !important;
+    color: black;
+}
+
+.st-br {
+    padding: 8px !important;
+    border: 1px solid #25282E;
+}
+
+.st-bc {
+    padding: 9px !important;
+    background: #0D0D0D;
+    color: white;
+}
+
+.st-go {
+    background: #0D0D0D !important;
+    color: white;
+}
+
+.st-bs {
+    background: #0D0D0D !important;
+    color: white;
+}
+
+.st-bx {
+    background: #0D0D0D !important;
+    color: white;
+}
+
+.st-cl {
+    padding: 9px !important;
+}
+
+.st-bg {
+    padding: 9px !important;
+}
+
+.st-bv {
+    background: #0D0D0D !important;
+}
+
+#heading {
+    height: 144px;
+    left: 550px;
+    top: 386px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 185px;
+    letter-spacing: -0.02em;
+}
+
+.stButton {
+    margin: 0px !important;
+}
+
+.css-1ko0gb7 {
+    margin: 0px 0px 1rem !important;
+}
+
+.css-hi6a2p {
+    max-width: 1000px !important;
+    padding: 2.5rem 1.5rem 6rem !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+b,
+i {
+    color: #FFFFFF !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.css-ip91b3 {
+    width: 22rem !important;
+}
+
+.css-pday0i {
+    width: 24rem;
+    background: black !important;
+}
+
+a {
+    color: #6da7ff !important;
+    text-decoration: none;
+}
+
+.css-hi6a2p {
+    flex: 1 1 0%;
+    width: 100%;
+    padding: 2.5rem 1rem 6rem;
+    max-width: 730px;
+    margin: 53px;
+    border-radius: 5px;
+}
+
+hr {
+    margin: 1em 3px;
+    padding: 0px;
+    color: inherit;
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-image: initial;
+    border-bottom: 21px solid #131313 !important;
+    margin: 12px -32px;
+    border-radius: 5px;
+}
+
+.css-feqc82 {
+    position: relative;
+    width: 584px;
+    justify-content: center;
+    left: 188px;
+    top: 34px;
+}
+
+.css-1bi8zkq {
+    width: 518px;
+    margin: 7vh 0vw 0 4vw !important;
+}
+
+@media screen and (max-width: 530px) {
+    .css-n19jqu {
+        margin: 0 37.5% !important;
+    }
+}
+
+.css-1v3fvcr {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.images1 {
+    position: absolute;
+    width: 187px;
+    height: 187px;
+    left: 927px;
+    top: -219px;
+    background: url('https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg'), #C4C4C4;
+    border: 7px solid #131313;
+    border-radius: 8px;
+}
+
+.images2 {
+    width: 241px;
+    height: 241px;
+    left: 1359px;
+    top: 67px;
+    margin: -134px 67.5vw;
+    background: url('https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg'), #C4C4C4;
+    border: 7px solid #131313;
+    border-radius: 8px;
+}
+
+.images3 {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: url('https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg'), #C4C4C4;
+    border: 9px solid #131313;
+    border-radius: 8px;
+    margin: 98px 78.5vw 0 72.5vw;
+}
+
+.bottom_images1 {
+    position: absolute;
+    width: 123px;
+    height: 123px;
+    left: -61px;
+    top: 706px;
+    background: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg'), #C4C4C4;
+    border: 9px solid #131313;
+    border-radius: 8px;
+    margin: -216px -222px;
+    z-index: 1;
+}
+
+.bottom_images2 {
+    position: absolute;
+    width: 347px;
+    height: 347px;
+    left: -86px;
+    top: 768px;
+    background: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg'), #C4C4C4;
+    border-radius: 8px;
+    margin: -200px -320px;
+}
+
+.bottom_images3 {
+    position: absolute;
+    width: 79px;
+    height: 79px;
+    left: -61px;
+    top: 830px;
+    background: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg'), #C4C4C4;
+    border: 9px solid #131313;
+    border-radius: 8px;
+    margin: -190px -20px;
+}
+</style>""", unsafe_allow_html=True)
+
 # while changing the theme add some transition
 elif changer == False:
     st.markdown("""<style>
-                    .css-1djdyxw {
-                     margin:19px 14px !important;
-                    font-size:48px;
-                    color:black;
-                    transform:scale3d(1.5,1.5,1.5);
-                }
-                .stCheckbox label{
-                    border:1px solid #EEF6FF;
-                }
-                .st-df{padding:10px;}
-                .st-cn{padding:20px;border-radius:5px;background-color:#ee7274 !important;font-size:1.2em;font-family: 'Poppins', sans-serif;}
-                .css-1ubkpyc{margin:21px -1px;padding: 18px 35px 14px 35px;}
-                .css-lybem{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;}
-                .css-qbe2hs{margin:21px -1px;padding: 18px 35px 14px 35px;border: 1px solid red;}
-                .css-n19jqu:hover{background:#ee7274 !important; color:black !important;}
-                .css-n19jqu{margin:34px 41.5%;padding:19px 58px !important;border: 1px solid red;box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;background:#ee7274 !important;color:white;}
-                .st-br{padding:8px !important}
-                .st-bc{padding:9px !important;background:transparent}
-                .st-go{background: transparent !important;}
-                .st-bs{background:transparent !important;}
-                .st-bx{background:transparent !important;}
-                .st-bu{background:transparent !important;}
-                .st-cz{background:transparent !important;}
-                .st-cl{padding: 9px !important;}
-                .st-bg{padding: 9px !important;}
-                .st-bv{background:transparent !important;border:none !important;}
-                # #heading{font-family: Poppins;font-style: normal;font-weight: 600;font-size: 96px;line-height: 144px;letter-spacing: -0.02em;letter-spacing: -0.02em !important;color: #000000;position: relative;height: 100%;width: 100%;bottom: 9px;top:12vh; }
-                #heading{
-                        # width: 500px;
-                        height: 144px;
-                        left: 550px;
-                        top: 386px;
-                        font-family: Poppins;
-                        font-style: normal;
-                        font-weight: 600;
-                        font-size: 96px;
-                        line-height: 185px;
-                        letter-spacing: -0.02em;
-                }
-              
-                .css-1djdyxw{margin:10px 53px;}
-                .stButton{margin:0px!important;}
-                .css-1ko0gb7{margin:0px 0px 1rem !important;}
-                .css-hi6a2p{max-width:1000px !important ;padding: 2.5rem 1.5rem 6rem !important;}
-                h1,h2,h3,h4,h5,h6,p,b,i{color:black!important;font-family: 'Poppins', sans-serif !important;}
-                .css-ip91b3{width:22rem !important;}
-                .css-pday0i{width:24rem;background:white !important;}
-                a{color:#1a0dab!important;text-decoration:none !important;}
-                .css-hi6a2p {flex: 1 1 0%;width: 100%;padding: 2.5rem 1rem 6rem;max-width: 730px;margin: 53px;border-radius: 5px;}
-                hr {margin: 1em 3px;padding: 0px;color: inherit;background-color: transparent;border-top: none;border-right: none;border-left: none;border-image: initial;border-bottom: 21px solid #f0f5f7!important;margin: 12px -32px;border-radius: 5px;}
-                .css-feqc82 {
-                position: relative;
-                width: 584px;
-                justify-content: center;
-                left: 188px;
-                top: 34px;
-                # margin: 7vh 0vw 0 4vw;
-                }
-                # .css-1sry6mp , .css-16xd7h, .css-47n5yn,.css-18pr10j,.css-nn3r2c,.css-18kfq8s,.css-11i2q6c,.css-11tp6y0,.css-pbvyo7,.css-r2fnjw,.css-oy2m8b,.css-11wmr1h,.css-yyyoaw,.css-jb9642,.css-nwse0c,.css-a72296,.css-1rzvowm,.css-upbzir,.css-3xxbtp,.css-1k7n4nm,.css-1ttvahg,.css-1acsqd8,.css-zcv45d,.css-1sry6mp,.css-o4v7a2{
-                #     width: 584px;
-                #     height: 46px;
-                #     left: 508px;
-                #     top: 534px;
-                #     background: #FFFFFF;
-                #     border: 1px solid #DFE1E5;
-                #     box-sizing: border-box;
-                #     border-radius: 8px;
-                #     margin: 7vh 0vw 0 4vw;
-                # }
-                .css-1bi8zkq{
-                    width: 518px;
-                    margin: 7vh 0vw 0 4vw !important;
-                }
-                @media screen and (max-width: 530px) {
-                    .css-n19jqu{
-                        margin:0 37.5% !important;
-                    }
-                }
-            .css-1v3fvcr{
-                overflow-x:hidden;
-                overflow-y:hidden;
-                }
+                  .css-1djdyxw {
+    margin: 19px 14px !important;
+    font-size: 48px;
+    color: black;
+    transform: scale3d(1.5, 1.5, 1.5);
+}
+
+.stCheckbox label {
+    border: 1px solid #EEF6FF;
+}
+
+.st-df {
+    padding: 10px;
+}
+
+.st-cn {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #ee7274 !important;
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.css-1ubkpyc {
+    margin: 21px -1px;
+    padding: 18px 35px 14px 35px;
+}
+
+.css-lybem {
+    margin: 21px -1px;
+    padding: 18px 35px 14px 35px;
+    border: 1px solid red;
+    box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;
+}
+
+.css-qbe2hs {
+    margin: 21px -1px;
+    padding: 18px 35px 14px 35px;
+    border: 1px solid red;
+}
+
+.css-n19jqu:hover {
+    background: #ee7274 !important;
+    color: black !important;
+}
+
+.css-n19jqu {
+    margin: 34px 41.5%;
+    padding: 19px 58px !important;
+    border: 1px solid red;
+    box-shadow: rgb(0 0 0 / 16%) 0px 4px 16px;
+    background: #ee7274 !important;
+    color: white;
+}
+
+.st-br {
+    padding: 8px !important
+}
+
+.st-bc {
+    padding: 9px !important;
+    background: transparent
+}
+
+.st-go {
+    background: transparent !important;
+}
+
+.st-bs {
+    background: transparent !important;
+}
+
+.st-bx {
+    background: transparent !important;
+}
+
+.st-bu {
+    background: transparent !important;
+}
+
+.st-cz {
+    background: transparent !important;
+}
+
+.st-cl {
+    padding: 9px !important;
+}
+
+.st-bg {
+    padding: 9px !important;
+}
+
+.st-bv {
+    background: transparent !important;
+    border: none !important;
+}
+#heading {
+    height: 144px;
+    left: 550px;
+    top: 386px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 185px;
+    letter-spacing: -0.02em;
+}
+
+.css-1djdyxw {
+    margin: 10px 53px;
+}
+
+.stButton {
+    margin: 0px !important;
+}
+
+.css-1ko0gb7 {
+    margin: 0px 0px 1rem !important;
+}
+
+.css-hi6a2p {
+    max-width: 1000px !important;
+    padding: 2.5rem 1.5rem 6rem !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+b,
+i {
+    color: black !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.css-ip91b3 {
+    width: 22rem !important;
+}
+
+.css-pday0i {
+    width: 24rem;
+    background: white !important;
+}
+
+a {
+    color: #1a0dab !important;
+    text-decoration: none !important;
+}
+
+.css-hi6a2p {
+    flex: 1 1 0%;
+    width: 100%;
+    padding: 2.5rem 1rem 6rem;
+    max-width: 730px;
+    margin: 53px;
+    border-radius: 5px;
+}
+
+hr {
+    margin: 1em 3px;
+    padding: 0px;
+    color: inherit;
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-image: initial;
+    border-bottom: 21px solid #f0f5f7 !important;
+    margin: 12px -32px;
+    border-radius: 5px;
+}
+
+.css-feqc82 {
+    position: relative;
+    width: 584px;
+    justify-content: center;
+    left: 188px;
+    top: 34px;
+}
+
+.css-1bi8zkq {
+    width: 518px;
+    margin: 7vh 0vw 0 4vw !important;
+}
+
+@media screen and (max-width: 530px) {
+    .css-n19jqu {
+        margin: 0 37.5% !important;
+    }
+}
+
+.css-1v3fvcr {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
             </style>""", unsafe_allow_html=True)
 
 #  on click change to dark theme
@@ -750,37 +1140,51 @@ if query:
          </style>
          """, unsafe_allow_html=True)
     st.markdown("""<style>
-        .css-1v3fvcr{
-            overflow-x:hidden;
-            overflow-y:auto;
-            }
-     .images1,  .images2, .images3, .bottom_images1, .bottom_images2, .bottom_images3{
-         display:none;
-     }
-     .css-n19jqu{
-    margin:-83px 74.5%;
-    position:absolute;
+       .css-1v3fvcr {
+    overflow-x: hidden;
+    overflow-y: auto;
 }
-.css-feqc82{
-    top:16px;
-    left:114px;
+
+.images1,
+.images2,
+.images3,
+.bottom_images1,
+.bottom_images2,
+.bottom_images3 {
+    display: none;
 }
-.stCheckbox{
-    width:100px;
-    position:absolute;
-    visibility:hidden;
+
+.css-n19jqu {
+    margin: -83px 74.5%;
+    position: absolute;
 }
+
+.css-feqc82 {
+    top: 16px;
+    left: 114px;
+}
+
+.stCheckbox {
+    width: 100px;
+    position: absolute;
+    visibility: hidden;
+}
+
 @media screen and (min-width: 2000px) {
     .css-n19jqu {
-    margin: -46px 74.5% !important;
-    } 
-}
-     .css-hlxwf4{margin:-59px 0 !important !important;}
-    @media screen and (max-width: 1000px) {
-        .css-n19jqu{
-            margin:-97px 82.5%;
-        }
+        margin: -46px 74.5% !important;
     }
+}
+
+.css-hlxwf4 {
+    margin: -59px 0 !important;
+}
+
+@media screen and (max-width: 1000px) {
+    .css-n19jqu {
+        margin: -97px 82.5%;
+    }
+}
      </style>""", unsafe_allow_html=True)
    
     placeholder.empty()
