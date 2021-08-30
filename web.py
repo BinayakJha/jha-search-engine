@@ -521,49 +521,19 @@ hr {
         margin-top: -19px !important;
         font-size: 61px !important
     }
-     .css-rncmk8 {
-        display: flex !important;
-    }
-    .css-1kyxreq { 
-        visibility: hidden !important;
-        margin: -1rem !important;; 
-    }
 }
   
 @media screen and (min-width: 406px) and (max-width: 531px) {
     #heading{
         margin-top: -19px !important;
-        font-size: 55px !important
-    }
-     .css-rncmk8 {
-        display: flex !important;
-    }
-    .css-1kyxreq { 
-        visibility: hidden !important;
-        margin: -1rem !important;; 
-    }
+        font-size: 55px !important;
 }
 @media screen and (max-width: 530px) {
     .css-n19jqu {
-        margin: 15px 22.5% !important
-    }
-     .css-rncmk8 {
-        display: flex !important;
-    }
-    .css-1kyxreq { 
-        visibility: hidden !important;
-        margin: -1rem !important;; 
+        margin: 15px 22.5% !important;
     }
 }
-@media screen and (max-width: 640px) {
-    .css-rncmk8 {
-        display: flex !important;
-    }
-    .css-1kyxreq { 
-        visibility: hidden !important;
-        margin: -1rem !important;; 
-    }
-}
+
 @media screen and (min-width: 767px) {
     #heading {
         margin-top: -19px !important;
@@ -1332,9 +1302,6 @@ if query:
 }
 .st-ei{
     width:0px !important;
-}
-.st-eh {
-    width: 0px !important;
 }
 @media screen and (min-width: 2000px) {
     .css-n19jqu {
