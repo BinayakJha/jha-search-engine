@@ -217,6 +217,8 @@ def get_source(url):
 
 
 query = st.text_input("",)
+# replace spaces with +
+query = query.replace(" ", "+")
 button = """
     <style>
 .st-df {
@@ -1293,9 +1295,10 @@ if query:
         st.markdown("Info")
     try:
         try:
-            st.header('Featured answer :')
+          
             col1, col2 = st.columns([0.5, 6])
             with col2:
+                st.header('Featured answer :')
                 featured_answer = people_also_ask.get_simple_answer(query)
                 if "youtube.com/watch?v" in featured_answer:
                     url = featured_answer
@@ -1342,9 +1345,7 @@ if query:
                     except:
                         
                             # replace spaces with +
-                            query = query.replace(' ', "+")
                             lyrics_url = "https://www.google.com/search?q=" + query
-                            print(lyrics_url)
                             session = HTMLSession()
                             response = session.get(lyrics_url)
                             try:
