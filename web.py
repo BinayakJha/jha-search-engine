@@ -1313,59 +1313,6 @@ if query:
                
                 else:
                     st.markdown(featured_answer, unsafe_allow_html=True)
-                try:
-                             # replace spaces with +
-                        lyrics_url = "https://www.google.com/search?q=" + query
-                        print(lyrics_url)
-                        session = HTMLSession()
-                        response = session.get(lyrics_url)
-                        try:
-                            para1 =  response.html.xpath('//*[@id="rso"]/div[1]/div/div/div/div[1]/div/div[2]/div/div/div/div/div/div[1]/div[2]/div[1]')
-                            st.markdown(para1[0].text)
-                        except IndexError:
-                            pass
-
-                        try:
-                            para2 =  response.html.xpath('//*[@id="rso"]/div[1]/div/div/div/div[1]/div/div[2]/div/div/div/div/div/div[1]/div[2]/div[2]')
-                            st.markdown(para2[0].text)
-                        except IndexError:
-                            pass
-
-                        try:
-                            para3 =  response.html.xpath('//*[@id="rso"]/div[1]/div/div/div/div[1]/div/div[2]/div/div/div/div/div/div[1]/div[2]/div[3]')
-                            st.markdown(para3[0].text)
-                        except IndexError:
-                            pass
-
-                        try:
-                            para4 =  response.html.xpath('//*[@id="rso"]/div[1]/div/div/div/div[1]/div/div[2]/div/div/div/div/div/div[1]/div[2]/div[4]')
-                            st.markdown(para4[0].text)
-                        except IndexError:
-                            pass
-
-                        try:
-                            para5 =  response.html.xpath('//*[@id="rso"]/div[1]/div/div/div/div[1]/div/div[2]/div/div/div/div/div/div[1]/div[2]/div[5]')
-                            st.markdown(para5[0].text)
-                        except IndexError:
-                            pass
-                        try:
-                            para6 =  response.html.xpath('//*[@id="rso"]/div[1]/div/div/div/div[1]/div/div[2]/div/div/div/div/div/div[1]/div[2]/div[6]')
-                            st.markdown(para6[0].text)
-                        except IndexError:
-                            pass
-                        try:
-                            para7 =  response.html.xpath('//*[@id="rso"]/div[1]/div/div/div/div[1]/div/div[2]/div/div/div/div/div/div[1]/div[2]/div[7]')
-                            st.markdown(para7[0].text)
-                        except IndexError:
-                            pass
-                        try:
-                            para8 =  response.html.xpath('//*[@id="rso"]/div[1]/div/div/div/div[1]/div/div[2]/div/div/div/div/div/div[1]/div[2]/div[8]')
-                            st.markdown(para8[0].text)
-                        except IndexError:
-                            pass
-                except IndexError:
-                    pass
-                
                 if featured_answer == "":
                     try:
                         # replace meaning of or defination of with space
