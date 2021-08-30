@@ -5,6 +5,7 @@ from numpy.lib.function_base import place
 import requests
 import urllib
 import pandas as pd
+from requests.api import get
 from requests_html import HTML
 from requests_html import HTMLSession
 import streamlit as st
@@ -520,19 +521,49 @@ hr {
         margin-top: -19px !important;
         font-size: 61px !important
     }
+     .css-rncmk8 {
+        display: flex !important;
+    }
+    .css-1kyxreq { 
+        visibility: hidden !important;
+        margin: -1rem !important;; 
+    }
 }
   
 @media screen and (min-width: 406px) and (max-width: 531px) {
     #heading{
         margin-top: -19px !important;
         font-size: 55px !important
+    }
+     .css-rncmk8 {
+        display: flex !important;
+    }
+    .css-1kyxreq { 
+        visibility: hidden !important;
+        margin: -1rem !important;; 
+    }
 }
 @media screen and (max-width: 530px) {
     .css-n19jqu {
         margin: 15px 22.5% !important
     }
+     .css-rncmk8 {
+        display: flex !important;
+    }
+    .css-1kyxreq { 
+        visibility: hidden !important;
+        margin: -1rem !important;; 
+    }
 }
-
+@media screen and (max-width: 640px) {
+    .css-rncmk8 {
+        display: flex !important;
+    }
+    .css-1kyxreq { 
+        visibility: hidden !important;
+        margin: -1rem !important;; 
+    }
+}
 @media screen and (min-width: 767px) {
     #heading {
         margin-top: -19px !important;
@@ -1211,7 +1242,33 @@ def parse_results(response):
 
     return output
 
+def youtube_videos(query):
+    query = urllib.parse.quote_plus(query)
+    response2 = get_source(f"https://www.google.com/search?q={query}&sxsrf=AOaemvK8imeKYLRhi4mg-vzXoQ1_XPxwlA:1630319960797&source=lnms&tbm=vid&sa=X&ved=2ahUKEwjtlIiRx9jyAhWegtgFHcjcDR4Q_AUoAnoECAEQBA&biw=1366&bih=693")
+    return response2
 
+# youtube videos functions
+def parse_youtube_videos(response):
+    css_identifier_result = ".tF2Cxc"
+    css_identifier_title = ".LC20lb"
+    css_identifier_description = ".aCOpRe"
+    css_identifier_time = ".fG8Fp"
+
+    results = response.html.find(css_identifier_result)
+    output2 = []
+    for result in results:
+        item2 = {
+            'title': result.find(css_identifier_title, first=True).text,
+            'link': result.find(css_identifier_title, first=True).attrs['href'],
+            'description': result.find(css_identifier_description, first=True).text,
+            'time': result.find(css_identifier_time, first=True).text,
+        }
+        output2.append(item2)
+        return output2
+
+def youtube_google_search(query):
+    response2 = youtube_videos(query)
+    return parse_youtube_videos(response2)
 def google_search(query):
     response = get_results(query)
     return parse_results(response)
@@ -1391,8 +1448,7 @@ if query:
                 # st.link(title[i], link[i])
                 with col1:
                     try:
-                        favicon_url = "https://www.google.com/s2/favicons?sz=64&domain_url=" + \
-                            link[i]
+                        favicon_url = "https://www.google.com/s2/favicons?sz=64&domain_url=" + link[i]
                         st.image(favicon_url, width=32)
                     except:
                         pass
@@ -1488,9 +1544,9 @@ if query:
         except:
             pass
     elif choice == "Images":
-        st.write('Images tab Comming soon')
+        st.write('Images tab comming sooon')
     elif choice == "Videos":
-        st.write('Videos tab Comming soon')
+        st.write('Videos tab comming sooon')
     elif choice == "News":
         st.write('News tab Comming soon')
     elif choice == "Info":
