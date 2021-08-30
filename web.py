@@ -359,8 +359,13 @@ i {
 .css-pday0i {
     width: 22rem !important;
     background: white !important;
+    margin: 10px 10px;
+    border-radius: 5px;
 }
-
+.css-wot580{
+    margin:6px 6px;
+}
+}
 a {
     color: #1a0dab !important;
     text-decoration: none !important;
@@ -680,6 +685,7 @@ if changer == True:
             <style>
     .st-em {background-color: rgb(14 14 14) !important;}
     span{color: #ffffff !important;}        
+    .st-ef {fill: rgb(255, 255, 255) !important;}
     .css-1djdyxw {
     margin: 19px 14px !important;
     font-size: 48px;
@@ -821,8 +827,8 @@ i {
 }
 
 .css-pday0i {
-    width: 24rem;
-    background: black !important;
+    width: 22rem !important;
+    background: #242731 !important;
 }
 
 a {
