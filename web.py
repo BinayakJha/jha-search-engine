@@ -354,11 +354,11 @@ i {
 }
 
 .css-ip91b3 {
-    width: 22rem !important;
+    width: 20.5rem !important;
 }
 
 .css-pday0i {
-    width: 22rem !important;
+    width: 21.5rem !important;
     background: white !important;
     margin: 10px 10px;
     border-radius: 5px;
@@ -828,7 +828,7 @@ i {
 }
 
 .css-pday0i {
-    width: 22rem !important;
+    width: 21.5rem !important;
     background: #242731 !important;
 }
 
@@ -1099,7 +1099,7 @@ i {
 }
 
 .css-pday0i {
-    width: 24rem;
+    width: 21.5rem;
     background: white !important;
 }
 
