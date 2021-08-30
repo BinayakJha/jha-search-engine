@@ -1346,6 +1346,7 @@ if query:
                         
                             # replace spaces with +
                             lyrics_url = "https://www.google.com/search?q=" + query
+                            print(lyrics_url)
                             session = HTMLSession()
                             response = session.get(lyrics_url)
                             try:
