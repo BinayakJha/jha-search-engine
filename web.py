@@ -1310,41 +1310,8 @@ if query:
                     yt_url1 = f"https://i.ytimg.com/vi/{featured_answer1}/0.jpg"
                     st.markdown(f'<a href="{yt_url1}" target="_blank"><iframe height="400" src="https://www.youtube.com/embed/{featured_answer1}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style = "width:90%;border-radius:5px;"></iframe></a>', unsafe_allow_html=True)
                     st.header(f"[{title}]({featured_answer})")
-                else:
-                    st.markdown(featured_answer, unsafe_allow_html=True)
-                if featured_answer == "":
-                    try:
-                        # replace meaning of or defination of with space
-                        if "meaning of" in query:
-                            query = query.replace("meaning of", "")
-                        if "defination of" in query:
-                            query = query.replace("defination of", "")
-                        # replace the word with space
-                        if " " in query:
-                            query = query.replace(" ", "")
-                        if 'meaning' in query:
-                            query = query.replace('meaning', "")
-                        if 'defination' in query:
-                            query = query.replace('defination', "")
-                        if 'what is' in query:
-                            query = query.replace('what is', "")
-                        if 'What is' in query:
-                            query = query.replace('What is', "")
-
-                        url = "https://www.vocabulary.com/dictionary/" + query
-                        session = HTMLSession()
-                        response = session.get(url)
-                        defination = response.html.find(
-                            '.definition', first=True).text
-                        defination2 = response.html.find(
-                            '.pos-icon', first=True).text
-                        # remove defination2 text from defination
-                        defination = defination.replace(defination2, "")
-                        st.markdown(
-                            f'<p><b>{defination2}</b> → {defination}</p>', unsafe_allow_html=True)
-                    except:
-                        
-                            # replace spaces with +
+                elif 'lyrics' in query:
+                             # replace spaces with +
                             lyrics_url = "https://www.google.com/search?q=" + query
                             print(lyrics_url)
                             session = HTMLSession()
@@ -1393,6 +1360,42 @@ if query:
                                 st.markdown(para8[0].text)
                             except IndexError:
                                 pass
+                else:
+                    st.markdown(featured_answer, unsafe_allow_html=True)
+                
+                if featured_answer == "":
+                    try:
+                        # replace meaning of or defination of with space
+                        if "meaning of" in query:
+                            query = query.replace("meaning of", "")
+                        if "defination of" in query:
+                            query = query.replace("defination of", "")
+                        # replace the word with space
+                        if " " in query:
+                            query = query.replace(" ", "")
+                        if 'meaning' in query:
+                            query = query.replace('meaning', "")
+                        if 'defination' in query:
+                            query = query.replace('defination', "")
+                        if 'what is' in query:
+                            query = query.replace('what is', "")
+                        if 'What is' in query:
+                            query = query.replace('What is', "")
+
+                        url = "https://www.vocabulary.com/dictionary/" + query
+                        session = HTMLSession()
+                        response = session.get(url)
+                        defination = response.html.find(
+                            '.definition', first=True).text
+                        defination2 = response.html.find(
+                            '.pos-icon', first=True).text
+                        # remove defination2 text from defination
+                        defination = defination.replace(defination2, "")
+                        st.markdown(
+                            f'<p><b>{defination2}</b> → {defination}</p>', unsafe_allow_html=True)
+                        
+                    except:
+                        pass
 
 
             st.markdown('---')
