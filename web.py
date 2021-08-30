@@ -402,7 +402,7 @@ hr {
 
 @media screen and (max-width: 530px) {
     .css-n19jqu {
-        margin: 0 37.5% !important;
+        margin: 0 22.5% !important;
     }
 }
 
@@ -1131,7 +1131,7 @@ hr {
 
 @media screen and (max-width: 530px) {
     .css-n19jqu {
-        margin: 0 37.5% !important;
+        margin: 0 22.5% !important;
     }
 }
 
