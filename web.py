@@ -277,7 +277,7 @@ button = """
 }
 
 .st-bc {
-    padding: 9px !important;
+    padding: 8px !important;
     background: transparent
 }
 
@@ -302,11 +302,11 @@ button = """
 }
 
 .st-cl {
-    padding: 9px !important;
+    padding: 8px !important;
 }
 
 .st-bg {
-    padding: 9px !important;
+    padding: 8px !important;
 }
 
 .st-bv {
@@ -357,7 +357,7 @@ i {
 }
 
 .css-pday0i {
-    width: 24rem;
+    width: 22rem !important;
     background: white !important;
 }
 
@@ -444,6 +444,10 @@ hr {
     font-size: 48px;
     color: #ffffff;
     font-family:system-ui;
+}
+.css-vuszbj {
+    margin-bottom: 0px !important;
+    height: 0px !important;
 }
 @media screen and (max-width: 313px) {
     .css-n19jqu {
@@ -739,7 +743,7 @@ if changer == True:
 }
 
 .st-bc {
-    padding: 9px !important;
+    padding: 8px !important;
     background: #0D0D0D;
     color: white;
 }
@@ -760,11 +764,11 @@ if changer == True:
 }
 
 .st-cl {
-    padding: 9px !important;
+    padding: 8px !important;
 }
 
 .st-bg {
-    padding: 9px !important;
+    padding: 8px !important;
 }
 
 .st-bv {
@@ -1003,7 +1007,7 @@ elif changer == False:
 }
 
 .st-bc {
-    padding: 9px !important;
+    padding: 8px !important;
     background: transparent
 }
 
@@ -1028,11 +1032,11 @@ elif changer == False:
 }
 
 .st-cl {
-    padding: 9px !important;
+    padding: 8px !important;
 }
 
 .st-bg {
-    padding: 9px !important;
+    padding: 8px !important;
 }
 
 .st-bv {
@@ -1218,6 +1222,7 @@ results = google_search(query)
 # end youtube
 
 if query:
+    placeholder.empty()
     if changer ==True:
         st.markdown("""<style>
          .css-hi6a2p{background-color:#242731 !important}
@@ -1244,12 +1249,12 @@ if query:
 }
 
 .css-n19jqu {
-    margin: -83px 74.5%;
+    margin: -75px 74.5%;
     position: absolute;
 }
 
 .css-feqc82 {
-    top: 16px;
+    top: 22px;
     left: 114px;
 }
 
@@ -1271,216 +1276,210 @@ if query:
 
 @media screen and (max-width: 1000px) {
     .css-n19jqu {
-        margin: -97px 82.5%;
+        margin: -97px 72.5%;
     }
 }
      </style>""", unsafe_allow_html=True)
    
-    placeholder.empty()
-    col1, col2, col3, col4, col5, col6, col7 = st.columns(
-        (0.5, 1, 1, 1, 1, 1, 1))
-    with col1:
-        all = st.markdown("All")
-    with col2:
-        images = st.markdown("Images")
-    with col3:
-        videos = st.markdown("News")
-    with col4:
-        maps = st.markdown("Videos")
-    with col5:
-        st.write("")
-    with col6:
-        st.write("")
-    with col7:
-        st.markdown("Info")
-    try:
+    menu = ["All","Images","Videos","News","Info"]
+    choice = st.selectbox("", menu)
+    if choice == "All":
         try:
-          
-            col1, col2 = st.columns([0.5, 6])
-            with col2:
-                st.header('Featured answer :')
-                featured_answer = people_also_ask.get_simple_answer(query)
-                if "youtube.com/watch?v" in featured_answer:
-                    url = featured_answer
-                    session = HTMLSession()
-                    response = session.get(url)
-                    title = response.html.find('title', first=True).text
-                    featured_answer1 = featured_answer.split(
-                        "youtube.com/watch?v=")[1]
-                    yt_url1 = f"https://i.ytimg.com/vi/{featured_answer1}/0.jpg"
-                    st.markdown(f'<a href="{yt_url1}" target="_blank"><iframe height="400" src="https://www.youtube.com/embed/{featured_answer1}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style = "width:90%;border-radius:5px;"></iframe></a>', unsafe_allow_html=True)
-                    st.header(f"[{title}]({featured_answer})")
-               
-                else:
-                    st.markdown(featured_answer, unsafe_allow_html=True)
-                if featured_answer == "":
-                    try:
-                        # replace meaning of or defination of with space
-                        if "meaning of" in query:
-                            query = query.replace("meaning of", "")
-                        if "defination of" in query:
-                            query = query.replace("defination of", "")
-                        # replace the word with space
-                        if " " in query:
-                            query = query.replace(" ", "")
-                        if 'meaning' in query:
-                            query = query.replace('meaning', "")
-                        if 'defination' in query:
-                            query = query.replace('defination', "")
-                        if 'what is' in query:
-                            query = query.replace('what is', "")
-                        if 'What is' in query:
-                            query = query.replace('What is', "")
-
-                        url = "https://www.vocabulary.com/dictionary/" + query
+            try:
+            
+                col1, col2 = st.columns([0.5, 6])
+                with col2:
+                    st.header('Featured answer :')
+                    featured_answer = people_also_ask.get_simple_answer(query)
+                    if "youtube.com/watch?v" in featured_answer:
+                        url = featured_answer
                         session = HTMLSession()
                         response = session.get(url)
-                        defination = response.html.find(
-                            '.definition', first=True).text
-                        defination2 = response.html.find(
-                            '.pos-icon', first=True).text
-                        # remove defination2 text from defination
-                        defination = defination.replace(defination2, "")
-                        st.markdown(
-                            f'<p><b>{defination2}</b> → {defination}</p>', unsafe_allow_html=True)
-                        
+                        title = response.html.find('title', first=True).text
+                        featured_answer1 = featured_answer.split(
+                            "youtube.com/watch?v=")[1]
+                        yt_url1 = f"https://i.ytimg.com/vi/{featured_answer1}/0.jpg"
+                        st.markdown(f'<a href="{yt_url1}" target="_blank"><iframe height="400" src="https://www.youtube.com/embed/{featured_answer1}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style = "width:90%;border-radius:5px;"></iframe></a>', unsafe_allow_html=True)
+                        st.header(f"[{title}]({featured_answer})")
+                
+                    else:
+                        st.markdown(featured_answer, unsafe_allow_html=True)
+                    if featured_answer == "":
+                        try:
+                            # replace meaning of or defination of with space
+                            if "meaning of" in query:
+                                query = query.replace("meaning of", "")
+                            if "defination of" in query:
+                                query = query.replace("defination of", "")
+                            # replace the word with space
+                            if " " in query:
+                                query = query.replace(" ", "")
+                            if 'meaning' in query:
+                                query = query.replace('meaning', "")
+                            if 'defination' in query:
+                                query = query.replace('defination', "")
+                            if 'what is' in query:
+                                query = query.replace('what is', "")
+                            if 'What is' in query:
+                                query = query.replace('What is', "")
+
+                            url = "https://www.vocabulary.com/dictionary/" + query
+                            session = HTMLSession()
+                            response = session.get(url)
+                            defination = response.html.find(
+                                '.definition', first=True).text
+                            defination2 = response.html.find(
+                                '.pos-icon', first=True).text
+                            # remove defination2 text from defination
+                            defination = defination.replace(defination2, "")
+                            st.markdown(
+                                f'<p><b>{defination2}</b> → {defination}</p>', unsafe_allow_html=True)
+                            
+                        except:
+                            pass
+
+
+                st.markdown('---')
+                st.write("\n")
+            except:
+
+                pass
+            df = pandas.DataFrame(results)
+
+            title = df['title']
+            link = df['link']
+            text = df['text']
+            link2 = df['link']
+            try:
+
+                favicon = df['favicon']
+            except:
+                favicon = ""
+
+            # write title then link and then text
+            # add link inside the title
+            for i in range(len(title)):
+
+                col1, col2 = st.columns([0.5, 6])
+                # add style
+                style = """
+                <style>
+                .css-1v0mbdj{
+                    margin: 8px 2px;
+                }
+                .css-1v0mbdj img{
+                    border-radius:5px;
+                }
+                .css-vtsuw1{
+                    bottom: 10px;    
+                }
+                """
+                st.markdown(style, unsafe_allow_html=True)
+
+                # st.link(title[i], link[i])
+                with col1:
+                    try:
+                        favicon_url = "https://www.google.com/s2/favicons?sz=64&domain_url=" + \
+                            link[i]
+                        st.image(favicon_url, width=32)
                     except:
                         pass
 
-
-            st.markdown('---')
-            st.write("\n")
-        except:
-
-            pass
-        df = pandas.DataFrame(results)
-
-        title = df['title']
-        link = df['link']
-        text = df['text']
-        link2 = df['link']
-        try:
-
-            favicon = df['favicon']
-        except:
-            favicon = ""
-
-        # write title then link and then text
-        # add link inside the title
-        for i in range(len(title)):
-
-            col1, col2 = st.columns([0.5, 6])
-            # add style
-            style = """
-            <style>
-            .css-1v0mbdj{
-                margin: 8px 2px;
-            }
-            .css-1v0mbdj img{
-                border-radius:5px;
-            }
-            .css-vtsuw1{
-                bottom: 10px;    
-            }
-            """
-            st.markdown(style, unsafe_allow_html=True)
-
-            # st.link(title[i], link[i])
-            with col1:
-                try:
-                    favicon_url = "https://www.google.com/s2/favicons?sz=64&domain_url=" + \
-                        link[i]
-                    st.image(favicon_url, width=32)
-                except:
-                    pass
-
-            with col2:
-
-                st.header(f"[{title[i]}]({link[i]})")
-            col1, col2 = st.columns([0.5, 6])
-            # If youtube in favicon url then show image
-            # if image is not loaded then pass
-            if "youtube.com" in favicon_url:
-                col1, col2 = st.columns([6, 2])
-                with col1:
-                    st.markdown(f'{text[i][0:300]}')
                 with col2:
 
-                    if "/watch?v" in link[i]:
-                        link3 = link[i][32:]
-                        yt_url = f"https://i.ytimg.com/vi/{link3}/0.jpg"
-                        st.markdown(
-                            f"<img src ='{yt_url}' style='width: 100%;border-radius:5px;'>", unsafe_allow_html=True)
-                    # if not then leave the space
-            else:
-                st.markdown(f'{text[i][0:500]}')
-            st.markdown("---")
-            st.write("\n")
-    except:
-        st.error("Sorry, No results found :( Please try another query")
-    try:
-        url = "https://search.brave.com/search?q="+query
-        st.markdown(
-            "<style> html{font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;}</style>", unsafe_allow_html=True)
-        try:
-            session = HTMLSession()
-            response = session.get(url)
+                    st.header(f"[{title[i]}]({link[i]})")
+                col1, col2 = st.columns([0.5, 6])
+                # If youtube in favicon url then show image
+                # if image is not loaded then pass
+                if "youtube.com" in favicon_url:
+                    col1, col2 = st.columns([6, 2])
+                    with col1:
+                        st.markdown(f'{text[i][0:300]}')
+                    with col2:
 
-        except requests.exceptions.RequestException as e:
-            print(e)
-
-        title1 = response.html.find('.infobox-title')[0].text
-        description = response.html.find('.infobox-description')[0].text
-        big_description = response.html.find('.body .mb-6')[0].text
-        links = response.html.find('.links a')[0].attrs['href']
-        try:
-            rating = response.html.find('.h6')[0].text
-            rating_image = response.html.find('.rating-source')[0].attrs['src']
-            rating_text = response.html.find(
-                '.r .flex-hcenter .text-sm ')[0].text
-
+                        if "/watch?v" in link[i]:
+                            link3 = link[i][32:]
+                            yt_url = f"https://i.ytimg.com/vi/{link3}/0.jpg"
+                            st.markdown(
+                                f"<img src ='{yt_url}' style='width: 100%;border-radius:5px;'>", unsafe_allow_html=True)
+                        # if not then leave the space
+                else:
+                    st.markdown(f'{text[i][0:500]}')
+                st.markdown("---")
+                st.write("\n")
         except:
-            pass
-
-# wikipedia image scraping
-
+            st.error("Sorry, No results found :( Please try another query")
         try:
-            # image
-            img_url = links
-
+            url = "https://search.brave.com/search?q="+query
+            st.markdown(
+                "<style> html{font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;}</style>", unsafe_allow_html=True)
             try:
                 session = HTMLSession()
-                response = session.get(img_url)
+                response = session.get(url)
 
             except requests.exceptions.RequestException as e:
                 print(e)
 
-            image_url = response.html.find(
-                '.infobox-image img')[0].attrs['src']
+            title1 = response.html.find('.infobox-title')[0].text
+            description = response.html.find('.infobox-description')[0].text
+            big_description = response.html.find('.body .mb-6')[0].text
+            links = response.html.find('.links a')[0].attrs['href']
+            try:
+                rating = response.html.find('.h6')[0].text
+                rating_image = response.html.find('.rating-source')[0].attrs['src']
+                rating_text = response.html.find(
+                    '.r .flex-hcenter .text-sm ')[0].text
 
+            except:
+                pass
+
+    # wikipedia image scraping
+
+            try:
+                # image
+                img_url = links
+
+                try:
+                    session = HTMLSession()
+                    response = session.get(img_url)
+
+                except requests.exceptions.RequestException as e:
+                    print(e)
+
+                image_url = response.html.find(
+                    '.infobox-image img')[0].attrs['src']
+
+            except:
+                pass
+
+            # title
+            try:
+
+                # center the image
+                st.sidebar.markdown(
+                    f'<img src="{image_url}" alt="0" style="width: 100%;border-radius: 5px;">', unsafe_allow_html=True)
+                # st.sidebar.image("https:"+image_url, width=150,)
+            except:
+                pass
+            st.sidebar.markdown(
+                f"<h1 style = 'margin:0px 5rem;'>{title1}</h1>", unsafe_allow_html=True)
+            st.sidebar.markdown(
+                f"<p style='margin:15px 3rem;font-size:0.9rem; font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;'>{description}</p>", unsafe_allow_html=True)
+            st.sidebar.write(big_description+f"[Wikipedia]({links})")
+            try:
+                st.sidebar.markdown(
+                    f"<h1 style = 'margin:0px 5rem;'>Ratings</h1><br>", unsafe_allow_html=True)
+                st.sidebar.markdown(
+                    f"<img src='{rating_image}' style='border-radius:20px;'>   &nbsp;  {rating_text}", unsafe_allow_html=True)
+            except:
+                pass
         except:
             pass
-
-        # title
-        try:
-
-            # center the image
-            st.sidebar.markdown(
-                f'<img src="{image_url}" alt="0" style="width: 100%;border-radius: 5px;">', unsafe_allow_html=True)
-            # st.sidebar.image("https:"+image_url, width=150,)
-        except:
-            pass
-        st.sidebar.markdown(
-            f"<h1 style = 'margin:0px 5rem;'>{title1}</h1>", unsafe_allow_html=True)
-        st.sidebar.markdown(
-            f"<p style='margin:15px 3rem;font-size:0.9rem; font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;'>{description}</p>", unsafe_allow_html=True)
-        st.sidebar.write(big_description+f"[Wikipedia]({links})")
-        try:
-            st.sidebar.markdown(
-                f"<h1 style = 'margin:0px 5rem;'>Ratings</h1><br>", unsafe_allow_html=True)
-            st.sidebar.markdown(
-                f"<img src='{rating_image}' style='border-radius:20px;'>   &nbsp;  {rating_text}", unsafe_allow_html=True)
-        except:
-            pass
-    except:
-        pass
+    elif choice == "Images":
+        st.write('Images tab Comming soon')
+    elif choice == "Videos":
+        st.write('Videos tab Comming soon')
+    elif choice == "News":
+        st.write('News tab Comming soon')
+    elif choice == "Info":
+        st.write('Info tab Comming soon')
