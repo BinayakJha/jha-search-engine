@@ -678,7 +678,9 @@ changer = st.checkbox("☾")
 if changer == True:
     st.markdown("""
             <style>
-           .css-1djdyxw {
+    .st-em {background-color: rgb(14 14 14) !important;}
+    span{color: #ffffff !important;}        
+    .css-1djdyxw {
     margin: 19px 14px !important;
     font-size: 48px;
     color: #ffffff;
@@ -1225,7 +1227,9 @@ if query:
     placeholder.empty()
     if changer ==True:
         st.markdown("""<style>
-         .css-hi6a2p{background-color:#242731 !important}
+         .css-hi6a2p{background-color:#242731 !important;}
+         .st-em {background-color: rgb(14 14 14) !important;}
+         span{color: #ffffff !important;}
          </style>
          """, unsafe_allow_html=True)
     else:
@@ -1263,7 +1267,9 @@ if query:
     position: absolute;
     visibility: hidden;
 }
-
+.st-ei{
+    width:0px !important;
+}
 @media screen and (min-width: 2000px) {
     .css-n19jqu {
         margin: -46px 74.5% !important;
