@@ -1333,6 +1333,9 @@ if query:
 .st-ei{
     width:0px !important;
 }
+.st-eh {
+    width: 0px !important;
+}
 @media screen and (min-width: 2000px) {
     .css-n19jqu {
         margin: -46px 74.5% !important;
