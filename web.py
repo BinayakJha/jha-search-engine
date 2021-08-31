@@ -1345,7 +1345,6 @@ if query:
 @media screen and (min-width: 1000px) {
     .css-n19jqu {
         margin:-58px 74.5% !important;
-        padding: 27px 58px !important;
     }
 
 }
