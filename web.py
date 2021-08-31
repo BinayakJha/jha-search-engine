@@ -1342,6 +1342,11 @@ if query:
         margin: -97px 72.5%;
     }
 }
+@media screen and (max-width: 2500px) {
+    .css-feqc82 {
+        top:71px !important;
+    }
+}
      </style>""", unsafe_allow_html=True)
    
     menu = ["All","Images","Videos","News","Info"]
