@@ -1344,8 +1344,10 @@ if query:
 }
 @media screen and (min-width: 1000px) {
     .css-n19jqu {
-        margin: -49px 74.5% !important;
+        margin:-58px 74.5% !important;
+        padding: 27px 58px !important;
     }
+
 }
 @media screen and (max-width: 2560px) {
     .css-feqc82 {
