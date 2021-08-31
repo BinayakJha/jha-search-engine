@@ -1339,14 +1339,15 @@ if query:
 
 @media screen and (max-width: 1000px) {
     .css-n19jqu {
-        margin: -97px 72.5%;
+        margin: -49px 74.5%;
     }
 }
-@media screen and (max-width: 2500px) {
+@media screen and (max-width: 2560px) {
     .css-feqc82 {
         top:71px !important;
     }
 }
+
      </style>""", unsafe_allow_html=True)
    
     menu = ["All","Images","Videos","News","Info"]
