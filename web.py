@@ -680,7 +680,7 @@ hr {
     """
 st.markdown(button, unsafe_allow_html=True)
 st.button("Search")
-changer = st.checkbox("☾")
+changer = st.checkbox("◐")
 if changer == True:
     st.markdown("""
             <style>
