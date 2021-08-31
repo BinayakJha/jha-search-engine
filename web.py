@@ -136,12 +136,12 @@ st.markdown("""
     border-radius: 8px;
     }
 }   
-@media screen and (min-width:2000px) {
+@media screen and (min-width:2560px) {
     .images1 {
     position: absolute;
     width: 187px;
     height: 187px;
-    left: 1283px;
+    left: 1504px;
     top: -219px;
     background: url(https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg), #C4C4C4;
     border: 7px solid #FFFFFF;
@@ -154,14 +154,14 @@ st.markdown("""
         background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
         border: 9px solid #FFFFFF;
         border-radius: 8px;
-        margin: 99px 77.5vw 0px 70.5vw;
+        margin: 78px 64.5vw 0px 64.5vw;
     }
  .images2 {
     width: 241px;
     height: 241px;
     left: 1356px;
     top: 67px;
-    margin: -134px 64.5vw;
+    margin: -119px 61.5vw;
     background: url(https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg), #C4C4C4;
     border: 7px solid #FFFFFF;
     border-radius: 8px;
@@ -170,8 +170,8 @@ st.markdown("""
         position: absolute;
         width: 123px;
         height: 123px;
-        left: -276px;
-        top: 945px;
+        left: -521px;
+        top: 1278px;
         background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg), #C4C4C4;
         border: 9px solid #FFFFFF;
         border-radius: 8px;
@@ -181,8 +181,8 @@ st.markdown("""
 .bottom_images2 {
         position: absolute;
         width: 347px;
-        left: -321px;
-        top: 1002px;
+        left: -567px;
+        top: 1357px;
         background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg), #C4C4C4;
         border-radius: 8px;
         margin: -200px -320px;
@@ -191,8 +191,8 @@ st.markdown("""
         position: absolute;
         width: 79px;
         height: 79px;
-        left: -308px;
-        top: 1072px;
+        left: -541px;
+        top: 1472px;
         background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg), #C4C4C4;
         border: 9px solid #FFFFFF;
         border-radius: 8px;
@@ -574,15 +574,7 @@ hr {
         margin: 125px 75.5vw 0 60.5vw;
     }
 }
-@media screen and (min-width:765px)and (max-width: 1150px) {
-    .images1 {
-        left: 960px;
-        top: -251px;
-    }
-    .images2 {
-        margin: -224px 75.5vw;
-}
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1920px)  and (max-width: 2500px) {
     .images1 {
         position: absolute;
         width: 187px;
@@ -620,7 +612,7 @@ hr {
         width: 123px;
         height: 123px;
         left: -179px;
-        top: 761px;
+        top: 933px;
         background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg), #C4C4C4;
         border: 9px solid #FFFFFF;
         border-radius: 8px;
@@ -633,7 +625,7 @@ hr {
         width: 347px;
         height: 347px;
         left: -207px;
-        top: 822px;
+        top: 992px;
         background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg), #C4C4C4;
         border-radius: 8px;
         margin: -200px -320px;
@@ -644,7 +636,7 @@ hr {
         width: 79px;
         height: 79px;
         left: -188px;
-        top: 937px;
+        top: 1088px;
         background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg), #C4C4C4;
         border: 9px solid #FFFFFF;
         border-radius: 8px;
@@ -655,13 +647,44 @@ hr {
         margin-top: 142px !important;
     }
 }
+    </style>
+    """
+st.markdown(button, unsafe_allow_html=True)
+st.markdown(''' 
+<style>
+@media screen and (min-width: 768px) and (max-width: 999px) {
+    .images1 {
+        left: 430px !important;
+        top: -240px !important;
+    }
+    .images2 {
+        margin:-197px 67.5vw !important;
+    }
+    .images3 {
+        margin:127px 78.5vw 0 78.5vw !important;
+    }
+    #heading {
+        font-size: 70px !important;
+        margin-top: -46px !important;
+    }
+    .css-n19jqu {
+        margin: -24px 38.5% !important;
+    }
+}
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+    .css-n19jqu {
+        margin: 14px ​40.5% !important;
+    }
+    .images2 {
+        margin:-211px 75.5vw !important;
+    }
+}
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 2560px) {
     .stCheckbox label {
         left: 1129px;
         top: 176px;
     }
-
     .css-n19jqu {
         margin: 65px 41.5% !important;
     }
@@ -671,14 +694,12 @@ hr {
     }
 
     #heading {
-        margin-top: 145px !important;
+        margin-top: 250px !important;
+
     }
 }
-
-
-    </style>
-    """
-st.markdown(button, unsafe_allow_html=True)
+</style>
+''', unsafe_allow_html=True)
 st.button("Search")
 changer = st.checkbox("◐")
 if changer == True:
