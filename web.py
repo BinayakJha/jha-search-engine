@@ -1344,7 +1344,7 @@ if query:
 }
 @media screen and (min-width: 1000px) {
     .css-n19jqu {
-        margin:-58px 74.5% !important;
+        margin:-41px 74.5% !important;
     }
 
 }
